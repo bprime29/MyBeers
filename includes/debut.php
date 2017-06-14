@@ -19,8 +19,8 @@
     <link rel="icon" type="image/png" href="images/icon.png" />
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <link rel="stylesheet" title="Design" href="css/design.css" type="text/css" media="screen" />
-    <script src="/js/jquery.js"></script>
-    <script src="/js/bootstrap.js"></script>
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.js"></script>
     <link href="css/bootstrap.css" rel="stylesheet">
 </head>
 
