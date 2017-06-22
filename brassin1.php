@@ -166,6 +166,26 @@ include("includes/debut.php");
                             <td align="left">Heat at 78,0 C</td>
                             <td align="left">78,0 C</td>
                         </tr>
+                        </tbody>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" bgcolor="#a9a9a9">
+                    <p class="text-center">
+                        Fermentation
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2"><em><strong>Primaire :</strong></em> temp&eacute;rature 22&deg;C dur&eacute;e 4 jours &agrave; 1 semaine</td>
+            </tr>
+            <tr>
+                <td colspan="2"><strong><em>Secondaire</em></strong> <em><strong>:</strong></em> temp&eacute;rature 22&deg;C dur&eacute;e 1 semaine puis 15&deg;C dur&eacute;e 2-3 semaines</td>
+            </tr>
+            <tr>
+                <td colspan="2"><em><strong>Sucre &agrave; l'embouteillage :</strong></em> 7g/L</td>
+            </tr>
             </tbody>
         </table>
     </div>
