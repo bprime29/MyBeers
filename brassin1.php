@@ -14,6 +14,7 @@ include("includes/debut.php");
     <div class="col-lg-10 col-lg-offset-1">
         <h1>Blonde simple au combava</h1>
         <p class="lead">Pour mon premier brassin, je suis parti sur une recette de bière blonde simple. J'y ai rajouté un combava pour lui rajouter une petite note exotique.</p>
+        <p align="center">Quelques photos du brassin <a href="https://goo.gl/photos/6BA9mZiJzFsnFB9v8">ici</a></p>
     </div>
     <div align="center">
         <table class="table1">
