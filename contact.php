@@ -9,3 +9,75 @@ $titre = "Mes recettes";
 include("includes/config.php");
 include("includes/debut.php");
 ?>
+<h1>Contacter moi!</h1>
+    <!-- Ceci est un commentaire HTML. Le code PHP devra remplacé cette ligne -->
+    <form method="post" action="<?php echo strip_tags($_SERVER['REQUEST_URI']); ?>">
+      <p>Votre nom et prénom: <input type="text" name="nom" size="30" /></p>
+      <p>Votre email: <span style="color:#ff0000;">*</span>: <input type="text" name="email" size="30" /></p>
+      <p>Message <span style="color:#ff0000;">*</span>:</p>
+      <textarea name="message" cols="60" rows="10"></textarea>
+        <p>Combien font 1+3: <span style="color:#ff0000;">*</span>: <input type="text" name="captcha" size="2" /></p>
+      <p><input type="submit" name="submit" value="Envoyer" /></p>
+    </form>
+  </body>
+</html>
+<?php
+// S'il y des données de postées
+if ($_SERVER['REQUEST_METHOD']=='POST') {
+    // Code PHP pour traiter l'envoi de l'email
+
+    $nombreErreur = 0; // Variable qui compte le nombre d'erreur
+    // Définit toutes les erreurs possibles
+    if (!isset($_POST['email'])) { // Si la variable "email" du formulaire n'existe pas (il y a un problème)
+        $nombreErreur++; // On incrémente la variable qui compte les erreurs
+        $erreur1 = '<p>Il y a un problème avec la variable "email".</p>';
+    } else { // Sinon, cela signifie que la variable existe (c'est normal)
+        if (empty($_POST['email'])) { // Si la variable est vide
+            $nombreErreur++; // On incrémente la variable qui compte les erreurs
+            $erreur2 = '<p>Vous avez oublié de donner votre email.</p>';
+        } else {
+            if (!filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
+                $nombreErreur++; // On incrémente la variable qui compte les erreurs
+                $erreur3 = '<p>Cet email ne ressemble pas un email.</p>';
+            }
+        }
+    }
+
+    if (!isset($_POST['message'])) {
+        $nombreErreur++;
+        $erreur4 = '<p>Il y a un problème avec la variable "message".</p>';
+    } else {
+        if (empty($_POST['message'])) {
+            $nombreErreur++;
+            $erreur5 = '<p>Vous avez oublié de donner un message.</p>';
+        }
+    }    // (3) Ici, il sera possible d'ajouter plus tard un code pour vérifier un captcha anti-spam.
+    if (!isset($_POST['captcha'])) {
+        $nombreErreur++;
+        $erreur6 = '<p>Il y a un problème avec la variable "captcha".</p>';
+    } else {
+        if ($_POST['captcha']!=4) {
+            // Vérifier que le résultat de l'équation est égal à 4
+            $nombreErreur++;
+            $erreur7 = '<p>Désolé, le captcha anti-spam est erroné.</p>';
+        }
+    }
+    if ($nombreErreur==0) { // S'il n'y a pas d'erreur
+        // Ici il faut ajouter tout le code pour envoyer l'email.
+        // Dans le code présenté au chapitre précédent, cela signifie au code entre les commentaires (1) et (2).
+    } else { // S'il y a un moins une erreur
+        echo '<div style="border:1px solid #ff0000; padding:5px;">';
+        echo '<p style="color:#ff0000;">Désolé, il y a eu '.$nombreErreur.' erreur(s). Voici le détail des erreurs:</p>';
+        if (isset($erreur1)) echo '<p>'.$erreur1.'</p>';
+        if (isset($erreur2)) echo '<p>'.$erreur2.'</p>';
+        if (isset($erreur3)) echo '<p>'.$erreur3.'</p>';
+        if (isset($erreur4)) echo '<p>'.$erreur4.'</p>';
+        if (isset($erreur5)) echo '<p>'.$erreur5.'</p>';
+        if (isset($erreur6))
+            echo '<p>'.$erreur6.'</p>';
+        if (isset($erreur7))
+            echo '<p>'.$erreur7.'</p>';        echo '</div>';
+    }
+}
+?>
+

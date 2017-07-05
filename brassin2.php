@@ -181,5 +181,11 @@ include("includes/debut.php");
             </tbody>
         </table>
     </div>
+    <!--div class="starter-template"-->
+        <h3>Commentaire :</h3>
+        <p>DI : 1077</p>
+        <p>DF : 1037</p>
+        <p>Je pense que la densité est resté haute à caude de la chaleur dans la maisson l'été! (25-26°)</p>
+    </div>
 
 </div><!-- /.container -->
