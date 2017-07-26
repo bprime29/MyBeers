@@ -28,6 +28,8 @@ include("includes/debut.php");
             <div class="item active">
                 <img src="http://localhost/images/1.jpg" alt="Image">
                 <div class="carousel-caption">
+                    <h3>Concassage</h3>
+                    <p>Concassage dans le garage</p>
                 </div>
             </div>
 
@@ -41,13 +43,11 @@ include("includes/debut.php");
         </div>
 
         <!-- Left and right controls -->
-        <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
-            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-            <span class="sr-only">Previous</span>
+        <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left"></span>
         </a>
-        <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
-            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-            <span class="sr-only">Next</span>
+        <a class="right carousel-control" href="#myCarousel" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right"></span>
         </a>
     </div>
 
