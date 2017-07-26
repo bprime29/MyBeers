@@ -53,9 +53,10 @@
                 </li>
                 <li><a href="contact.php">Contact</a></li>
             </ul>
-            <form class="navbar-form navbar-right inline-form">
+            <form class="navbar-form navbar-right inline-form" action="resultats_recherche.php" method="post">
                 <div class="form-group">
-                    <input type="search" class="input-sm form-control" placeholder="Recherche">
+                    <input type="text" class="input-sm form-control" placeholder="Recherche" name="recherche" id="recherche">
+                    <input type="hidden" id="AND" name="mode" value="AND"/>
                     <button type="submit" class="btn btn-primary btn-sm"><span class="glyphicon glyphicon-eye-open"></span> Chercher</button>
                 </div>
             </form>

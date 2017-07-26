@@ -14,7 +14,7 @@ include("includes/debut.php");
 
     <div class="starter-template">
         <h1>Mes expériences en tant que "brasseur amateur"</h1>
-        <p class="lead">Use this document as a way to quickly start any new project.<br> All you get is this text and a mostly barebones HTML document.</p>
+        <p class="lead">Petite présentation de mon expérience.</p>
     </div>
     <div id="myCarousel" class="carousel slide" data-ride="carousel">
         <!-- Indicators -->
@@ -26,7 +26,7 @@ include("includes/debut.php");
         <!-- Wrapper for slides -->
         <div class="carousel-inner" role="listbox">
             <div class="item active">
-                <img src="http://localhost/images/1.jpg" alt="Image">
+                <img src="images/1.jpg" alt="Image">
                 <div class="carousel-caption">
                     <h3>Concassage</h3>
                     <p>Concassage dans le garage</p>
