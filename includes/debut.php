@@ -23,7 +23,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <link rel="stylesheet" title="Design" href="css/design.css" type="text/css" media="screen" />
     <script src="js/jquery.js"></script>
-    <script src="js/bootstrap.js"></script> 
+    <script src="js/bootstrap.js"></script>
     <link href="css/bootstrap.css" rel="stylesheet">
 </head>
 
@@ -53,6 +53,12 @@
                 </li>
                 <li><a href="contact.php">Contact</a></li>
             </ul>
+            <form class="navbar-form navbar-right inline-form">
+                <div class="form-group">
+                    <input type="search" class="input-sm form-control" placeholder="Recherche">
+                    <button type="submit" class="btn btn-primary btn-sm"><span class="glyphicon glyphicon-eye-open"></span> Chercher</button>
+                </div>
+            </form>
         </div><!--/.nav-collapse -->
     </div>
 </div>
