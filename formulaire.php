@@ -9,6 +9,18 @@ $titre = "Formulaire";
 include("includes/config.php");
 include("includes/debut.php");
 ?>
+<?php
+try
+{
+    $bdd = new PDO('mysql:host=localhost;dbname=MyBeers;charset=utf8', 'root', 'livebox');
+}
+catch(Exception $e)
+{
+    die('Erreur : '.$e->getMessage());
+}
+$sql="SELECT Type, Name FROM stock";
+$item=$bdd->query($sql);
+?>
 
 <script src="js/fonction.js" xmlns="http://www.w3.org/1999/html"></script>
 <body>
@@ -31,8 +43,20 @@ include("includes/debut.php");
                 </div>
             </div>
             <div class="col-sm-3 nopadding">
-                <div class="form-group">
-                    <input type="text" class="form-control" id="Item" name="Item[]" value="" placeholder="Item">
+                <div class="input-group">
+                    <select class="form-control" id="Item" name="Item[]">
+                        <option value="">Item</option>
+                        <?php
+                        while($dataPF = $item->fetch())
+                        {
+                            ?>
+                            <option value="<?php echo $dataPF['Name']; ?>"><?php echo $dataPF['Name']; ?></option>
+                            <?php
+                        }
+
+                        ?>
+
+                    </select>
                 </div>
             </div>
             <div class="col-sm-3 nopadding">
