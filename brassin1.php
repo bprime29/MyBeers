@@ -14,11 +14,77 @@ include("includes/debut.php");
     <div class="col-lg-10 col-lg-offset-1">
         <h1>Blonde simple au combava</h1>
         <p class="lead">Pour mon premier brassin, je suis parti sur une recette de bière blonde simple. J'y ai rajouté un combava pour lui rajouter une petite note exotique.</p>
-<<<<<<< HEAD
         <p align="center">Quelques photos du brassin <a href="https://goo.gl/photos/6BA9mZiJzFsnFB9v8">ici</a></p>
-=======
         <p align="center">Quelques photos sont disponible <a href="https://goo.gl/photos/6BA9mZiJzFsnFB9v8">ici</a></p>
->>>>>>> refs/remotes/origin/master
+    </div>
+    <div class="col-lg-10 col-lg-offset-1">
+    <table class="table table-hover table-striped table-condensed">
+        <caption>
+            <h4>Ingrédients</h4>
+        </caption>
+        <thead>
+        <tr>
+            <th>Quantité</th>
+            <th>item</th>
+            <th>Type</th>
+            <th>% / IBU</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>6,00 kg</td>
+            <td>Pilsner (2 Row) Bel (3 EBC)</td>
+            <td>Grain</td>
+            <td>100,00 %</td>
+        </tr>
+        <tr>
+            <td>100 g</td>
+            <td>White wheat malt</td>
+            <td>Grain</td>
+            <td> %</td>
+        </tr>
+        <tr>
+            <td>23,00 g</td>
+            <td>Northern Brewer [8,40 %]  (80 min)</td>
+            <td>Hops</td>
+            <td>17,1 IBU</td>
+        </tr>
+        <tr>
+            <td>20,00 gm</td>
+            <td>Styrian Goldings [13,30 %]  (10 min)</td>
+            <td>Hops</td>
+            <td>8,5 IBU</td>
+        </tr>
+        <tr>
+            <td>1 Pkgs</td>
+            <td>SafAle English Ale (DCL Yeast #S-04)</td>
+            <td>Yeast-Ale</td>
+            <td></td
+        </tr>
+        </tbody>
+    </table>
+    </div>
+
+    <div class="col-lg-10 col-lg-offset-1">
+        <table class="table table-hover table-striped table-condensed">
+            <caption>
+                <h4>Profile de la bière</h4>
+            </caption>
+            <tbody>
+            <tr>
+                <td>Densité initial</td>
+                <td>1077</td>
+                <td>Densité final</td>
+                <td>1015</td>
+            </tr>
+            <tr>
+                <td>Taux d'alcool estimé</td>
+                <td>5.74</td>
+                <td>Bitterness</td>
+                <td>30.3 IBU</td>
+            </tr>
+            </tbody>
+        </table>
     </div>
     <div align="center">
         <table class="table1">
@@ -52,50 +118,6 @@ include("includes/debut.php");
                     <p class="text-center">
                         Ingrédients
                     </p>
-                </td>
-            </tr>
-            <tr>
-                <td colspan="2">
-                    <table class="ingredient">
-                        <tbody>
-                        <tr>
-                            <th width="16%" align="left">Amount</th>
-                            <th width="51%" align="left">Item</th>
-                            <th width="15%" align="left">Type</th>
-                            <th width="16%" align="left">% or IBU</th
-                        </tr>
-                        <tr>
-                            <td align="left">6,00 kg</td>
-                            <td align="left">Pilsner (2 Row) Bel (3 EBC)</td>
-                            <td align="left">Grain</td>
-                            <td align="left">100,00 %</td>
-                        </tr>
-                        <tr>
-                            <td align="left">100 g</td>
-                            <td align="left">White wheat malt</td>
-                            <td align="left">Grain</td>
-                            <td align="left"> %</td>
-                        </tr>
-                        <tr>
-                            <td align="left">23,00 g</td>
-                            <td align="left">Northern Brewer [8,40 %]  (80 min)</td>
-                            <td align="left">Hops</td>
-                            <td align="left">17,1 IBU</td>
-                        </tr>
-                        <tr>
-                            <td align="left">20,00 gm</td>
-                            <td align="left">Styrian Goldings [13,30 %]  (10 min)</td>
-                            <td align="left">Hops</td>
-                            <td align="left">8,5 IBU</td>
-                        </tr>
-                        <tr>
-                            <td align="left">1 Pkgs</td>
-                            <td align="left">SafAle English Ale (DCL Yeast #S-04)</td>
-                            <td align="left">Yeast-Ale</td>
-                            <td align="left"></td
-                        </tr>
-                        </tbody>
-                    </table>
                 </td>
             </tr>
             <tr>
