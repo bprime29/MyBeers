@@ -43,20 +43,8 @@ $item=$bdd->query($sql);
                 </div>
             </div>
             <div class="col-sm-3 nopadding">
-                <div class="input-group">
-                    <select class="form-control" id="Item" name="Item[]">
-                        <option value="">Item</option>
-                        <?php
-                        while($dataPF = $item->fetch())
-                        {
-                            ?>
-                            <option value="<?php echo $dataPF['Name']; ?>"><?php echo $dataPF['Name']; ?></option>
-                            <?php
-                        }
-
-                        ?>
-
-                    </select>
+                <div class="form-group">
+                    <input type="text" class="form-control" id="Item" name="Item[]" value="" placeholder="Item">
                 </div>
             </div>
             <div class="col-sm-3 nopadding">
@@ -64,18 +52,11 @@ $item=$bdd->query($sql);
                     <input type="text" class="form-control" id="Type" name="Type[]" value="" placeholder="Type">
                 </div>
             </div>
-
             <div class="col-sm-3 nopadding">
                 <div class="form-group">
                     <div class="input-group">
-                        <select class="form-control" id="educationDate" name="educationDate[]">
+                        <input type="text" class="form-control" id="IBU" name="IBU[]" value="" placeholder="% / IBU">
 
-                            <option value="">Date</option>
-                            <option value="2015">2015</option>
-                            <option value="2016">2016</option>
-                            <option value="2017">2017</option>
-                            <option value="2018">2018</option>
-                        </select>
                         <div class="input-group-btn">
                             <button class="btn btn-success" type="button"  onclick="education_fields();"> <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> </button>
                         </div>
@@ -91,6 +72,66 @@ $item=$bdd->query($sql);
         </div>
         <div class="panel panel-default">
             <div class="panel-heading">Profil de la bière:</div>
+        </div>
+        <div class="panel-body">
+            <div class="col-sm-3 nopadding">
+                <p>Densité initial :</p>
+            </div>
+            <div class="col-sm-3 nopadding">
+                <div class="form-group">
+                    <input type="text" class="form-control" id="DI" name="DI" value="" placeholder="DI">
+                </div>
+            </div>
+            <div class="col-sm-3 nopadding">
+                <p>Densité final :</p>
+            </div>
+            <div class="col-sm-3 nopadding">
+                <div class="form-group">
+                    <div class="input-group">
+                        <input type="text" class="form-control" id="DF" name="DF" value="" placeholder="DF">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="panel-body">
+            <div class="col-sm-3 nopadding">
+                <p>Taux d'alcool estimé :</p>
+            </div>
+            <div class="col-sm-3 nopadding">
+                <div class="form-group">
+                    <input type="text" class="form-control" id="Alcool" name="Alcool" value="" placeholder="%">
+                </div>
+            </div>
+            <div class="col-sm-3 nopadding">
+                <p>Bitterness :</p>
+            </div>
+            <div class="col-sm-3 nopadding">
+                <div class="form-group">
+                    <div class="input-group">
+                        <input type="text" class="form-control" id="Bitterness" name="Bitterness" value="" placeholder="IBU">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="panel-body">
+            <div class="col-sm-3 nopadding">
+                <p>Est color :</p>
+            </div>
+            <div class="col-sm-3 nopadding">
+                <div class="form-group">
+                    <input type="text" class="form-control" id="color" name="color" value="" placeholder="EBC">
+                </div>
+            </div>
+            <div class="col-sm-3 nopadding">
+                <p>Color :</p>
+            </div>
+            <div class="col-sm-3 nopadding">
+                <div class="form-group">
+                    <div class="input-group">
+                        <input type="text" class="form-control" id="color_val" name="color_val" value="" placeholder="#">
+                    </div>
+                </div>
+            </div>
         </div>
         <div class="panel-footer"><small>Press <span class="glyphicon glyphicon-plus gs"></span> to add another form field :)</small>, <small>Press <span class="glyphicon glyphicon-minus gs"></span> to remove form field :)</small></div>
         <input class="submit" type="submit" value="Confirm" />

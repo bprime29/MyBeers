@@ -9,7 +9,18 @@ $titre = "Brassin 1";
 include("includes/config.php");
 include("includes/debut.php");
 ?>
-
+<?php
+try
+{
+    $bdd = new PDO('mysql:host=localhost;dbname=MyBeers;charset=utf8', 'root', 'livebox');
+}
+catch(Exception $e)
+{
+    die('Erreur : '.$e->getMessage());
+}
+$sql_ingredients="SELECT * FROM ingredients WHERE Brassin='tt'";
+$sql_profil="SELECT * FROM profil WHERE Brassin='Brassin1'";
+?>
 <div class="container">
 
     <div class="col-lg-10 col-lg-offset-1">
@@ -32,36 +43,21 @@ include("includes/debut.php");
         </tr>
         </thead>
         <tbody>
-        <tr>
-            <td>6,00 kg</td>
-            <td>Pilsner (2 Row) Bel (3 EBC)</td>
-            <td>Grain</td>
-            <td>100,00 %</td>
-        </tr>
-        <tr>
-            <td>100 g</td>
-            <td>White wheat malt</td>
-            <td>Grain</td>
-            <td> %</td>
-        </tr>
-        <tr>
-            <td>23,00 g</td>
-            <td>Northern Brewer [8,40 %]  (80 min)</td>
-            <td>Hops</td>
-            <td>17,1 IBU</td>
-        </tr>
-        <tr>
-            <td>20,00 gm</td>
-            <td>Styrian Goldings [13,30 %]  (10 min)</td>
-            <td>Hops</td>
-            <td>8,5 IBU</td>
-        </tr>
-        <tr>
-            <td>1 Pkgs</td>
-            <td>SafAle English Ale (DCL Yeast #S-04)</td>
-            <td>Yeast-Ale</td>
-            <td></td
-        </tr>
+        <?php
+        $ingredients=$bdd->query($sql_ingredients);
+        while($dataIngredients = $ingredients->fetch())
+        {
+            ?>
+            <tr>
+                <td><?php echo $dataIngredients['quantité']; ?></td>
+                <td><?php echo $dataIngredients['Item']; ?></td>
+                <td><?php echo $dataIngredients['type']; ?></td>
+                <td><?php echo $dataIngredients['IBU']; ?></td>
+            </tr>
+            <?php
+        }
+
+        ?>
         </tbody>
     </table>
     </div>
@@ -72,17 +68,27 @@ include("includes/debut.php");
                 <h4>Profile de la bière</h4>
             </caption>
             <tbody>
+            <?php
+            $profil=$bdd->query($sql_profil);
+            $dataProfil=$profil->fetch();
+            ?>
             <tr>
                 <td>Densité initial</td>
-                <td>1077</td>
+                <td><?php echo $dataProfil['DI']; ?></td>
                 <td>Densité final</td>
-                <td>1015</td>
+                <td><?php echo $dataProfil['DF']; ?></td>
             </tr>
             <tr>
                 <td>Taux d'alcool estimé</td>
-                <td>5.74</td>
+                <td><?php echo $dataProfil['Alcool']; ?></td>
                 <td>Bitterness</td>
-                <td>30.3 IBU</td>
+                <td><?php echo $dataProfil['Bitterness']; ?></td>
+            </tr>
+            <tr>
+                <td>Est Color</td>
+                <td><?php echo $dataProfil['color']; ?></td>
+                <td>Color</td>
+                <td><TABLE><TD BGCOLOR="<?php echo $dataProfil['color_val']; ?>"><FONT COLOR="<?php echo $dataProfil['color_val']; ?>"> Color </FONT></TD></TABLE></td>
             </tr>
             </tbody>
         </table>
