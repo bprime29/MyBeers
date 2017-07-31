@@ -17,6 +17,26 @@ include("includes/debut.php");
         <p align="center">Quelques photos du brassin <a href="https://goo.gl/photos/6BA9mZiJzFsnFB9v8">ici</a></p>
         <p align="center">Quelques photos sont disponible <a href="https://goo.gl/photos/6BA9mZiJzFsnFB9v8">ici</a></p>
     </div>
+
+    <div class="col-lg-10 col-lg-offset-1">
+        <table class="table table-hover table-condensed">
+            <tbody>
+            <tr>
+                <td>Type: Monopalier</td>
+                <td>Date: 22/04/2017</td>
+            </tr>
+            <tr>
+                <td>Batch size: 20l</td>
+                <td>Brasseur: Bertrand</td>
+            </tr>
+            <tr>
+                <td>Boil size: 20l</td>
+                <td>Boil time: 80min</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
     <div class="col-lg-10 col-lg-offset-1">
     <table class="table table-hover table-striped table-condensed">
         <caption>
