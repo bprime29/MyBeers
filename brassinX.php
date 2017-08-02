@@ -18,16 +18,46 @@ catch(Exception $e)
 {
     die('Erreur : '.$e->getMessage());
 }
-$sql_ingredients="SELECT * FROM ingredients WHERE Brassin='tt'";
-$sql_profil="SELECT * FROM profil WHERE Brassin='Brassin1'";
+
+$name = "Test1";
+
+$sql_info="SELECT * FROM Info WHERE Brassin='$name'";
+$sql_ingredients="SELECT * FROM ingredients WHERE Brassin='$name'";
+$sql_profil="SELECT * FROM profil WHERE Brassin='$name'";
 ?>
 <div class="container">
 
     <div class="col-lg-10 col-lg-offset-1">
-        <h1>XXXXXXXXXXX</h1>
+        <h1><?php echo $name; ?></h1>
         <p class="lead">Pour mon premier brassin, je suis parti sur une recette de bière blonde simple. J'y ai rajouté un combava pour lui rajouter une petite note exotique.</p>
         <p align="center">Quelques photos du brassin <a href="https://goo.gl/photos/6BA9mZiJzFsnFB9v8">ici</a></p>
         <p align="center">Quelques photos sont disponible <a href="https://goo.gl/photos/6BA9mZiJzFsnFB9v8">ici</a></p>
+    </div>
+
+    <div class="col-lg-10 col-lg-offset-1">
+        <table class="table table-hover table-condensed">
+            <caption>
+                <h4>Information</h4>
+            </caption>
+            <tbody>
+            <?php
+            $info=$bdd->query($sql_info);
+            $dataInfo=$info->fetch();
+            ?>
+            <tr>
+                <td>Type: <?php echo $dataInfo['Type']; ?></td>
+                <td>Date: <?php echo $dataInfo['Date']; ?></td>
+            </tr>
+            <tr>
+                <td>Batch size: <?php echo $dataInfo['Batch_size']; ?></td>
+                <td>Brasseur: <?php echo $dataInfo['Brasseur']; ?></td>
+            </tr>
+            <tr>
+                <td>Boil size: <?php echo $dataInfo['Boil_size']; ?></td>
+                <td>Boil time: <?php echo $dataInfo['Boil_time']; ?></td>
+            </tr>
+            </tbody>
+        </table>
     </div>
     <div class="col-lg-10 col-lg-offset-1">
     <table class="table table-hover table-striped table-condensed">
@@ -66,6 +96,38 @@ $sql_profil="SELECT * FROM profil WHERE Brassin='Brassin1'";
         <table class="table table-hover table-striped table-condensed">
             <caption>
                 <h4>Profile de la bière</h4>
+            </caption>
+            <tbody>
+            <?php
+            $profil=$bdd->query($sql_profil);
+            $dataProfil=$profil->fetch();
+            ?>
+            <tr>
+                <td>Densité initial</td>
+                <td><?php echo $dataProfil['DI']; ?></td>
+                <td>Densité final</td>
+                <td><?php echo $dataProfil['DF']; ?></td>
+            </tr>
+            <tr>
+                <td>Taux d'alcool estimé</td>
+                <td><?php echo $dataProfil['Alcool']; ?></td>
+                <td>Bitterness</td>
+                <td><?php echo $dataProfil['Bitterness']; ?></td>
+            </tr>
+            <tr>
+                <td>Est Color</td>
+                <td><?php echo $dataProfil['color']; ?></td>
+                <td>Color</td>
+                <td><TABLE><TD BGCOLOR="<?php echo $dataProfil['color_val']; ?>"><FONT COLOR="<?php echo $dataProfil['color_val']; ?>"> Color </FONT></TD></TABLE></td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="col-lg-10 col-lg-offset-1">
+        <table class="table table-hover table-striped table-condensed">
+            <caption>
+                <h4>Mash profile</h4>
             </caption>
             <tbody>
             <?php

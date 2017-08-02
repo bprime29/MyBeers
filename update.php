@@ -22,6 +22,13 @@ catch(Exception $e)
 ?>
 
 <?php if(isset($_POST)==true && empty($_POST)==false):
+$etype = $_POST['Type'];
+$date = $_POST['Date'];
+$batch_size = $_POST['Batch_size'];
+$brasseur = $_POST['Brasseur'];
+$boil_size = $_POST['Boil_size'];
+$boil_time = $_POST['Boil_time'];
+
 $brassin = $_POST['Brassin'];
 $amount = $_POST['Amount'];
 $item = $_POST['Item'];
@@ -36,13 +43,45 @@ $color = $_POST['color'];
 $color_val = $_POST['color_val'];
 
 ?>
-<input name="bus" type="text" readonly="readonly" value="<?php echo $brassin ?>" xmlns="http://www.w3.org/1999/html"/>
 <div class="container">
 
     <div class="col-lg-10 col-lg-offset-1">
         <h1><?php echo $brassin ?></h1>
 
     </div>
+    
+    <?php
+    $qInfo="INSERT INTO Info (Brassin, Type, Date, Batch_size, Brasseur, Boil_size, Boil_time) VALUES ('".$brassin."','".$etype."','".$date."','".$batch_size."','".$brasseur."','".$boil_size."','".$boil_time."')";
+    $bdd->query($qInfo);
+    ?>
+    <div class="col-lg-10 col-lg-offset-1">
+        <table class="table table-hover table-striped table-condensed">
+            <caption>
+                <h4>Informations</h4>
+            </caption>
+            <tbody>
+            <tr>
+                <td>Type :</td>
+                <td><?php echo $etype; ?></td>
+                <td>Date :</td>
+                <td><?php echo $date; ?></td>
+            </tr>
+            <tr>
+                <td>Batch size :</td>
+                <td><?php echo $batch_size; ?></td>
+                <td>Brasseur :</td>
+                <td><?php echo $brasseur; ?></td>
+            </tr>
+            <tr>
+                <td>Boil size :</td>
+                <td><?php echo $boil_size; ?></td>
+                <td>Boil time :</td>
+                <td><?php echo $boil_time; ?></td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    
     <div class="col-lg-10 col-lg-offset-1">
         <table class="table table-hover table-striped table-condensed">
             <caption>
