@@ -193,6 +193,10 @@ $item=$bdd->query($sql);
                 </div>
             </div>
         </div>
+        <div class="panel panel-default">
+            <div class="panel-heading">Mash profile :</div>
+        </div>
+        
         <div class="panel-footer"><small>Press <span class="glyphicon glyphicon-plus gs"></span> to add another form field :)</small>, <small>Press <span class="glyphicon glyphicon-minus gs"></span> to remove form field :)</small></div>
         <input class="submit" type="submit" value="Confirm" />
         </form>
