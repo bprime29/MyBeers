@@ -26,7 +26,7 @@ include("includes/debut.php");
         <!-- Wrapper for slides -->
         <div class="carousel-inner" role="listbox">
             <div class="item active">
-                <img src="images/1.jpg" alt="Image">
+                <img src="images/01.jpg" alt="Image">
                 <div class="carousel-caption">
                     <h3>Concassage</h3>
                     <p>Concassage dans le garage</p>
@@ -34,7 +34,7 @@ include("includes/debut.php");
             </div>
 
             <div class="item">
-                <img src="images/2.jpg" alt="Image">
+                <img src="images/02.jpg" alt="Image">
                 <div class="carousel-caption">
                     <h3>Lorem</h3>
                     <p>Lorem ipsum...</p>

@@ -21,3 +21,8 @@ body {
 .ingredient {
     width: 100%;
 }
+
+.table.table-borderless td,
+.table.table-borderless th {
+    border-top: 0;
+}
