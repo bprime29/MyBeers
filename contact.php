@@ -9,6 +9,8 @@ $titre = "Mes recettes";
 include("includes/config.php");
 include("includes/debut.php");
 ?>
+
+
 <h1>Contacter moi!</h1>
     <!-- Ceci est un commentaire HTML. Le code PHP devra remplacé cette ligne -->
     <form method="post" action="<?php echo strip_tags($_SERVER['REQUEST_URI']); ?>">
