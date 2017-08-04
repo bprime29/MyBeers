@@ -196,8 +196,113 @@ $item=$bdd->query($sql);
         <div class="panel panel-default">
             <div class="panel-heading">Mash profile :</div>
         </div>
-        
-        <div class="panel-footer"><small>Press <span class="glyphicon glyphicon-plus gs"></span> to add another form field :)</small>, <small>Press <span class="glyphicon glyphicon-minus gs"></span> to remove form field :)</small></div>
+        <div class="panel-body">
+            <div class="col-sm-3 nopadding">
+                <p>Mash Name :</p>
+            </div>
+            <div class="col-sm-3 nopadding">
+                <div class="form-group">
+                    <input type="text" class="form-control" id="Mash_name" name="Mash_name" value="" placeholder="Infusion, Batch Sparge">
+                </div>
+            </div>
+            <div class="col-sm-3 nopadding">
+                <p>Total Grain Weight :</p>
+            </div>
+            <div class="col-sm-3 nopadding">
+                <div class="form-group">
+                    <div class="input-group">
+                        <input type="text" class="form-control" id="Total_grain" name="Total_grain" value="" placeholder="6.00 kg">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="panel-body">
+            <div class="col-sm-3 nopadding">
+                <p>Sparge Water :</p>
+            </div>
+            <div class="col-sm-3 nopadding">
+                <div class="form-group">
+                    <input type="text" class="form-control" id="Sparge_water" name="Sparge_water" value="" placeholder="10.0 L">
+                </div>
+            </div>
+            <div class="col-sm-3 nopadding">
+                <p>Sparge Temperature :</p>
+            </div>
+            <div class="col-sm-3 nopadding">
+                <div class="form-group">
+                    <div class="input-group">
+                        <input type="text" class="form-control" id="Sparge_temp" name="Sparge_temp" value="" placeholder="78.0 C">
+                    </div>
+                </div>
+            </div>
+        </div>
+        Mash step :
+        <div class="panel-body">
+            <div class="col-sm-3 nopadding">
+                <div class="form-group">
+                    <input type="text" class="form-control" id="Step_time" name="Step_time[]" value="" placeholder="80 min">
+                </div>
+            </div>
+            <div class="col-sm-3 nopadding">
+                <div class="form-group">
+                    <input type="text" class="form-control" id="Step_name" name="Step_name[]" value="" placeholder="Name">
+                </div>
+            </div>
+            <div class="col-sm-3 nopadding">
+                <div class="form-group">
+                    <input type="text" class="form-control" id="Description" name="Description[]" value="" placeholder="Description">
+                </div>
+            </div>
+            <div class="col-sm-3 nopadding">
+                <div class="form-group">
+                    <div class="input-group">
+                        <input type="text" class="form-control" id="Step_temp" name="Step_temp[]" value="" placeholder="72.0 C">
+
+                        <div class="input-group-btn">
+                            <button class="btn btn-success" type="button"  onclick="mash_step();"> <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="mash_step">
+
+            </div>
+
+            <div class="clear"></div>
+
+        </div>
+
+        <div class="panel panel-default">
+            <div class="panel-heading">Fermentation :</div>
+        </div>
+        <div class="panel-body">
+            <div class="col-sm-3 nopadding">
+                <p>Primaire :</p>
+            </div>
+            <div class="col-sm-9 nopadding">
+                <div class="form-group">
+                    <input type="text" class="form-control" id="primaire" name="primaire" value="" placeholder="température 22°C durée 4 jours à 1 semaine">
+                </div>
+            </div>
+            <div class="col-sm-3 nopadding">
+                <p>Secondaire :</p>
+            </div>
+            <div class="col-sm-9 nopadding">
+                <div class="form-group">
+                    <input type="text" class="form-control" id="secondaire" name="secondaire" value="" placeholder="température 22°C durée 1 semaine puis 15°C durée 2-3 semaines">
+                </div>
+            </div>
+            <div class="col-sm-3 nopadding">
+                <p>Sucre :</p>
+            </div>
+            <div class="col-sm-3 nopadding">
+                <div class="form-group">
+                    <input type="text" class="form-control" id="sucre" name="sucre" value="" placeholder="7g/L">
+                </div>
+            </div>
+        </div>
+
+            <div class="panel-footer"><small>Press <span class="glyphicon glyphicon-plus gs"></span> to add another form field :)</small>, <small>Press <span class="glyphicon glyphicon-minus gs"></span> to remove form field :)</small></div>
         <input class="submit" type="submit" value="Confirm" />
         </form>
     </div>

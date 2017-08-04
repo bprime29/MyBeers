@@ -20,3 +20,21 @@ function education_fields() {
 function remove_education_fields(rid) {
     $('.removeclass'+rid).remove();
 }
+
+function mash_step() {
+
+    room++;
+    var objTo = document.getElementById('mash_step')
+    var divtest = document.createElement("div");
+    divtest.setAttribute("class", "form-group removeclass"+room);
+    var rdiv = 'removeclass'+room;
+    divtest.innerHTML = '<div class="col-sm-3 nopadding"><div class="form-group"> <input type="text" class="form-control" id="Step_time" name="Step_time[]" value="" placeholder="80 min"></div></div>' +
+        '<div class="col-sm-3 nopadding"><div class="form-group"> <input type="text" class="form-control" id="Step_name" name="Step_name[]" value="" placeholder="Name"></div></div>' +
+        '<div class="col-sm-3 nopadding"><div class="form-group"> <input type="text" class="form-control" id="Description" name="Description[]" value="" placeholder="Description"></div></div>' +
+        '<div class="col-sm-3 nopadding"><div class="form-group"><div class="input-group"> <input type="text" class="form-control" id="Step_temp" name="Step_temp[]" value="" placeholder="72.0 C"><div class="input-group-btn"> <button class="btn btn-danger" type="button" onclick="remove_mash_step('+ room +');"> <span class="glyphicon glyphicon-minus" aria-hidden="true"></span> </button></div></div></div></div><div class="clear"></div>';
+
+    objTo.appendChild(divtest)
+}
+function remove_mash_step(rid) {
+    $('.removeclass'+rid).remove();
+}
