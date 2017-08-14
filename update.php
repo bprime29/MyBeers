@@ -42,6 +42,20 @@ $bitterness = $_POST['Bitterness'];
 $color = $_POST['color'];
 $color_val = $_POST['color_val'];
 
+$mash_name = $_POST['Mash_name'];
+$total_grain = $_POST['Total_grain'];
+$sparge_water = $_POST['Sparge_water'];
+$sparge_temp = $_POST['Sparge_temp'];
+
+$step_time = $_POST['Step_time'];
+$step_name = $_POST['Step_name'];
+$description = $_POST['Description'];
+$step_temp = $_POST['Step_temp'];
+
+$primaire = $_POST['primaire'];
+$secondaire = $_POST['secondaire'];
+$sucre = $_POST['sucre'];
+
 ?>
 <div class="container">
 
@@ -138,6 +152,82 @@ $color_val = $_POST['color_val'];
                 <td><?php echo $color; ?></td>
                 <td>Color</td>
                 <td><TABLE><TD BGCOLOR="<?php echo $color_val; ?>"><FONT COLOR="<?php echo $color_val; ?>"> Color </FONT></TD></TABLE></td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <?php
+    $query_mashinfo="INSERT INTO mash_info (Brassin, Mash_name, Total_grain, Sparge_water, Sparge_temp) VALUES ('".$brassin."','".$mash_name."','".$total_grain."','".$sparge_water."','".$sparge_temp."')";
+    $bdd->query($query_mashinfo);
+    ?>
+    <div class="col-lg-10 col-lg-offset-1">
+        <table class="table table-hover table-striped table-condensed">
+            <caption>
+                <h4>Mash Profile</h4>
+            </caption>
+            <tbody>
+            <tr>
+                <td>Mash Name</td>
+                <td><?php echo $mash_name; ?></td>
+                <td>Total grain</td>
+                <td><?php echo $total_grain; ?></td>
+            </tr>
+            <tr>
+                <td>Sparge water</td>
+                <td><?php echo $sparge_water; ?></td>
+                <td>Sparge temperature</td>
+                <td><?php echo $sparge_temp; ?></td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="col-lg-10 col-lg-offset-1">
+        <table class="table table-hover table-striped table-condensed">
+            <thead>
+            <tr>
+                <th>Step time</th>
+                <th>Name</th>
+                <th>Description</th>
+                <th>Step temp</th>
+            </tr>
+            </thead>
+            <tbody>
+            <?php foreach($step_name as $a => $b){
+                $query1="INSERT INTO mash_step (Brassin, Step_time, Name, Description, Step_temp) VALUES ('".$brassin."','".$step_time[$a]."','".$step_name[$a]."','".$description[$a]."','".$step_temp[$a]."')";
+
+                $bdd->query($query1);
+                ?>
+                <tr>
+                    <td><?php echo $step_time[$a]; ?></td>
+                    <td><?php echo $step_name[$a]; ?></td>
+                    <td><?php echo $description[$a]; ?></td>
+                    <td><?php echo $step_temp[$a]; ?></td>
+                </tr>
+            <?php } ?>
+            </tbody>
+        </table>
+    </div>
+    <?php
+    $query_mashinfo="INSERT INTO fermentation (Brassin, Primaire, Secondaire, Sucre) VALUES ('".$brassin."','".$primaire."','".$secondaire."','".$sucre."')";
+    $bdd->query($query_mashinfo);
+    ?>
+    <div class="col-lg-10 col-lg-offset-1">
+        <table class="table table-hover table-striped table-condensed">
+            <caption>
+                <h4>Mash Profile</h4>
+            </caption>
+            <tbody>
+            <tr>
+                <td>Mash Name</td>
+                <td><?php echo $mash_name; ?></td>
+                <td>Total grain</td>
+                <td><?php echo $total_grain; ?></td>
+            </tr>
+            <tr>
+                <td>Sparge water</td>
+                <td><?php echo $sparge_water; ?></td>
+                <td>Sparge temperature</td>
+                <td><?php echo $sparge_temp; ?></td>
             </tr>
             </tbody>
         </table>

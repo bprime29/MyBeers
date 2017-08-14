@@ -25,6 +25,7 @@
     <script src="js/jquery.js"></script>
     <script src="js/bootstrap.js"></script>
     <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/animate.css" rel="stylesheet">
 </head>
 
 <body>
