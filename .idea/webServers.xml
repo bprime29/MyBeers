@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="74fd07e5-dff6-4a8e-8573-2d08e076252f" name="raspberry" url="http://192.168.1.18">
+        <fileTransfer host="192.168.1.18" port="22" rootFolder="/data/bebzh29.synology.me/www" accessType="SFTP" password="dffadfeadfdedfd8dfc3dfc9dfc3dfcbdf98df9adf9adf9ddf8b" username="beb">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" />
+          </advancedOptions>
+          <option name="port" value="22" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
