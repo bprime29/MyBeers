@@ -5,7 +5,7 @@
  * Date: 6/14/17
  * Time: 4:31 PM
  */
-$titre = "Brassin x";
+$titre = "Brassin 3";
 include("includes/config.php");
 include("includes/debut.php");
 ?>
@@ -32,8 +32,8 @@ $sql_mash_info="SELECT * FROM mash_info WHERE Brassin='$name'";
 
     <div class="starter-template">
         <h1><?php echo $name; ?></h1>
-        <p class="lead">Pour mon premier brassin, je suis parti sur une recette de bière blonde simple. J'y ai rajouté un combava pour lui rajouter une petite note exotique.</p>
-        <p align="center">Quelques photos sont disponible <a href="https://goo.gl/photos/6BA9mZiJzFsnFB9v8">ici</a></p>
+        <p class="lead">L'objectif était de réaliser une bière rouge "d'automne". Elle se caractérise par une base amlté sucrée, équilibré par une légère note de houblon. Une fois dan sle verre, elle doit arborer une couronne de mousse couleur crème, et une belle teinte rubis profond, d'où son nom.</p>
+        <!--p align="center">Quelques photos sont disponible <a href="https://goo.gl/photos/6BA9mZiJzFsnFB9v8">ici</a></p-->
     </div>
 
     <div class="col-lg-10 col-lg-offset-1">
