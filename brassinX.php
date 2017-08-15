@@ -5,7 +5,7 @@
  * Date: 6/14/17
  * Time: 4:31 PM
  */
-$titre = "Brassin 1";
+$titre = "Brassin x";
 include("includes/config.php");
 include("includes/debut.php");
 ?>
@@ -19,7 +19,7 @@ catch(Exception $e)
     die('Erreur : '.$e->getMessage());
 }
 
-$name = "Brassin 1";
+$name = "Brassin 1%";
 
 $sql_info="SELECT * FROM Info WHERE Brassin='$name'";
 $sql_ingredients="SELECT * FROM ingredients WHERE Brassin='$name'";
