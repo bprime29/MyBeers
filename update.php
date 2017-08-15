@@ -13,7 +13,7 @@ include("includes/debut.php");
 <?php
 try
 {
-    $bdd = new PDO('mysql:host=localhost;dbname=MyBeers;charset=utf8', 'root', 'livebox');
+    $bdd = new PDO('mysql:host=localhost;dbname=MyBeers;charset=utf8', 'mybeers', 'Bebzh2912!');
 }
 catch(Exception $e)
 {
