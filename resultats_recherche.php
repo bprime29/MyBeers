@@ -9,6 +9,7 @@ $titre = "Accueil";
 include("includes/config.php");
 include("includes/debut.php");
 ?>
+<div class="container">
 <?php
 /*------------------------------------------------------------*/
 /*---------- Shooter's Search Engine v1.2 ----------*/
@@ -205,5 +206,6 @@ else
 }
 ?>
 		</p>
+	</div>
 	</body>
 </html>
