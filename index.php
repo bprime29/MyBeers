@@ -8,7 +8,7 @@
 $titre = "Accueil";
 include("includes/config.php");
 include("includes/debut.php");
-include("includes/fin.php")
+
 ?>
 
 <div class="container">
@@ -53,4 +53,6 @@ include("includes/fin.php")
     </div>
 
 </div><!-- /.container -->
-
+<?php
+include("includes/fin.php")
+?>
