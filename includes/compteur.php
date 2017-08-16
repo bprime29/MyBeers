@@ -2,7 +2,7 @@
 // Connexion à MySQL
 try
 {
-    $bdd = new PDO('mysql:host=localhost;dbname=espace_membre;charset=utf8', 'mybeers', 'Bebzh2912!');
+    $bdd = new PDO('mysql:host=localhost;dbname=espace_membre;charset=utf8', 'visiteur', 'visiteur');
 }
 catch(Exception $e)
 {
