@@ -11,7 +11,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-4 col-sm-6 footerleft ">
-                <div class="logofooter"> Logo</div>
+                <div class="logofooter"> Compteur</div>
                 <p><?php include ('includes/compteur.php'); ?></p>
 
 </div>
