@@ -52,3 +52,6 @@ include("includes/debut.php");
     </div>
 
 </div><!-- /.container -->
+<footer>
+    <p><?php include ('includes/compteur.php'); ?></p>
+</footer>
