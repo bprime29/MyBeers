@@ -62,7 +62,7 @@ include("includes/debut.php");
             </div>
             <div class="col-md-2 col-sm-6 paddingtop-bottom">
                 <h6 class="heading7">GENERAL LINKS</h6>
-                <ul class="footer-ul">
+                <!--ul class="footer-ul">
                     <li><a href="#"> Career</a></li>
                     <li><a href="#"> Privacy Policy</a></li>
                     <li><a href="#"> Terms & Conditions</a></li>
@@ -70,15 +70,15 @@ include("includes/debut.php");
                     <li><a href="#"> Ranking</a></li>
                     <li><a href="#"> Case Studies</a></li>
                     <li><a href="#"> Frequently Ask Questions</a></li>
-                </ul>
+                </ul-->
             </div>
             <div class="col-md-3 col-sm-6 paddingtop-bottom">
                 <h6 class="heading7">LATEST POST</h6>
-                <div class="post">
+                <!--div class="post">
                     <p>facebook crack the movie advertisment code:what it means for you <span>August 3,2015</span></p>
                     <p>facebook crack the movie advertisment code:what it means for you <span>August 3,2015</span></p>
                     <p>facebook crack the movie advertisment code:what it means for you <span>August 3,2015</span></p>
-                </div>
+                </div-->
             </div>
             <div class="col-md-3 col-sm-6 paddingtop-bottom">
                 <div class="fb-page" data-href="https://www.facebook.com/facebook" data-tabs="timeline" data-height="300" data-small-header="false" style="margin-bottom:15px;" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true">
