@@ -61,7 +61,6 @@
                     <button type="submit" class="btn btn-primary btn-sm"><span class="glyphicon glyphicon-eye-open"></span> Chercher</button>
                 </div>
             </form>
-            <a href="{% url 'login' %}" class="top-menu"><span class="glyphicon glyphicon-lock"></span></a>
         </div><!--/.nav-collapse -->
     </div>
 </div>
