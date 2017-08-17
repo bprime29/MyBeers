@@ -127,7 +127,7 @@ $sql_mash_info="SELECT * FROM mash_info WHERE Brassin='$name'";
     <div class="col-lg-10 col-lg-offset-1">
         <table class="table table-hover table-striped table-condensed">
             <caption>
-                <h4>Profile de la bière</h4>
+                <h4>Profil de la bière</h4>
             </caption>
             <tbody>
             <?php
