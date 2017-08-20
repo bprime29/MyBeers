@@ -5,187 +5,249 @@
  * Date: 6/14/17
  * Time: 4:31 PM
  */
-$titre = "Brassin 1";
+$titre = "Brassin 2";
 include("includes/config.php");
 include("includes/debut.php");
+?>
+<?php
+try
+{
+    $bdd = new PDO('mysql:host=localhost;dbname=MyBeers;charset=utf8', 'mybeers', 'Bebzh2912!');
+}
+catch(Exception $e)
+{
+    die('Erreur : '.$e->getMessage());
+}
+
+$name = "Brassin 2 : English India Pale Ale";
+
+$sql_info="SELECT * FROM Info WHERE Brassin='$name'";
+$sql_ingredients="SELECT * FROM ingredients WHERE Brassin='$name'";
+$sql_profil="SELECT * FROM profil WHERE Brassin='$name'";
+$sql_fermentation="SELECT * FROM fermentation WHERE Brassin='$name'";
+$sql_mash_step="SELECT * FROM mash_step WHERE Brassin='$name'";
+$sql_mash_info="SELECT * FROM mash_info WHERE Brassin='$name'";
 ?>
 <div class="container">
 
     <div class="starter-template">
-        <h1>English India Pale Ale</h1>
+        <h1><?php echo $name; ?></h1>
         <p class="lead">Pour mon deuxieme brassin, j'ai voulu tenter une recette d'India Pale Ale classique. Je me suis beaucoup inspiré d'une recette du site du nain brasseur. (<a href="http://univers-biere.net">http://univers-biere.net</a>)</p>
         <p align="center">Quelques photos du brassin <a href="https://goo.gl/photos/bxsVtosVEL5FhTADA">ici</a></p>
     </div>
-    <div align="center">
-        <table class="table1">
+
+    <div class="col-lg-10 col-lg-offset-1">
+        <table class="table table-borderless table-condensed table-hover">
+            <caption>
+                <h4>Information</h4>
+            </caption>
             <tbody>
+            <?php
+            $info=$bdd->query($sql_info);
+            $dataInfo=$info->fetch();
+            ?>
             <tr>
-                <td class="topleft">
-                    Type: Monopalier
-                </td>
-                <td class="topright">
-                    Date: 09/06/2017
-                </td>
+                <td>Type: <?php echo $dataInfo['Type']; ?></td>
+                <td>Date: <?php echo $dataInfo['Date']; ?></td>
             </tr>
             <tr>
-                <td class="topleft">
-                    Batch size: 20l
-                </td>
-                <td class="topright">
-                    Brasseur: Bertrand
-                </td>
+                <td>Batch size: <?php echo $dataInfo['Batch_size']; ?></td>
+                <td>Brasseur: <?php echo $dataInfo['Brasseur']; ?></td>
             </tr>
             <tr>
-                <td class="topleft">
-                    Boil size: 20l
-                </td>
-                <td class="topright">
-                    Boil time: 80min
-                </td>
+                <td>Boil size: <?php echo $dataInfo['Boil_size']; ?></td>
+                <td>Boil time: <?php echo $dataInfo['Boil_time']; ?></td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="col-lg-10 col-lg-offset-1">
+        <table class="table table-hover table-striped table-condensed">
+            <caption>
+                <h4>Ingrédients</h4>
+            </caption>
+            <thead>
+            <tr>
+                <th>Quantité</th>
+                <th>item</th>
+                <th>Type</th>
+                <th>% / IBU</th>
+            </tr>
+            </thead>
+            <tbody>
+            <?php
+            $ingredients=$bdd->query($sql_ingredients);
+            while($dataIngredients = $ingredients->fetch())
+            {
+                ?>
+                <tr>
+                    <td><?php echo $dataIngredients['quantité']; ?></td>
+                    <td><?php echo $dataIngredients['Item']; ?></td>
+                    <td><?php echo $dataIngredients['type']; ?></td>
+                    <td><?php echo $dataIngredients['IBU']; ?></td>
+                </tr>
+                <?php
+            }
+            ?>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="col-lg-10 col-lg-offset-1">
+        <table class="table table-hover table-striped table-condensed">
+            <thead>
+            <tr>
+                <th>Step time</th>
+                <th>Name</th>
+                <th>Description</th>
+                <th>Step temp</th>
+            </tr>
+            </thead>
+            <tbody>
+            <?php
+            $mash_step=$bdd->query($sql_mash_step);
+            while($dataMashStep = $mash_step->fetch())
+            {
+                ?>
+                <tr>
+                    <td><?php echo $dataMashStep['Step_time']; ?></td>
+                    <td><?php echo $dataMashStep['Name']; ?></td>
+                    <td><?php echo $dataMashStep['Description']; ?></td>
+                    <td><?php echo $dataMashStep['Step_temp']; ?></td>
+                </tr>
+                <?php
+            }
+
+            ?>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="col-lg-10 col-lg-offset-1">
+        <table class="table table-hover table-striped table-condensed">
+            <caption>
+                <h4>Profil de la bière</h4>
+            </caption>
+            <tbody>
+            <?php
+            $profil=$bdd->query($sql_profil);
+            $dataProfil=$profil->fetch();
+            ?>
+            <tr>
+                <td>Densité initial</td>
+                <td><?php echo $dataProfil['DI']; ?></td>
+                <td>Densité final</td>
+                <td><?php echo $dataProfil['DF']; ?></td>
             </tr>
             <tr>
-                <td colspan="2" bgcolor="#a9a9a9">
-                    <p class="text-center">
-                        Ingrédients
-                    </p>
-                </td>
+                <td>Taux d'alcool estimé</td>
+                <td><?php echo $dataProfil['Alcool']; ?></td>
+                <td>Bitterness</td>
+                <td><?php echo $dataProfil['Bitterness']; ?></td>
             </tr>
             <tr>
-                <td colspan="2">
-                    <table class="ingredient"
-                </td>
+                <td>Est Color</td>
+                <td><?php echo $dataProfil['color']; ?></td>
+                <td>Color</td>
+                <td><TABLE><TD BGCOLOR="<?php echo $dataProfil['color_val']; ?>"><FONT COLOR="<?php echo $dataProfil['color_val']; ?>"> Color </FONT></TD></TABLE></td>
             </tr>
-            <tr>
-                <td colspan="2">
-                    <table class="ingredient">
-                        <tbody>
-                        <tr>
-                            <th width="16%" align="left">Amount</th>
-                            <th width="51%" align="left">Item</th>
-                            <th width="15%" align="left">Type</th>
-                            <th width="16%" align="left">% or IBU</th
-                        </tr>
-                        <tr>
-                            <td align="left">6,00 kg</td>
-                            <td align="left">Pale Malt (2 Row) Bel</td>
-                            <td align="left">Grain</td>
-                            <td align="left">96,77 %</td>
-                        </tr>
-                        <tr>
-                            <td align="left">0.20 kg</td>
-                            <td align="left">Caramel/Crystal Malt - 60L (150,0 EBC)</td>
-                            <td align="left">Grain</td>
-                            <td align="left">3.23 %</td>
-                        </tr>
-                        <tr>
-                            <td align="left">60,00 g</td>
-                            <td align="left">Goldings, East Kent [5,40 %] (80 min)</td>
-                            <td align="left">Hops</td>
-                            <td align="left">32,5 IBU</td>
-                        </tr>
-                        <tr>
-                            <td align="left">10,00 g</td>
-                            <td align="left">Northern Brewer [8,40 %] (80 min)</td>
-                            <td align="left">Hops</td>
-                            <td align="left">8,4 IBU</td>
-                        </tr>
-                        <tr>
-                            <td align="left">10,00 g</td>
-                            <td align="left">Goldings, East Kent [5,40 %] (10 min)</td>
-                            <td align="left">Hops</td>
-                            <td align="left">1,9 IBU</td>
-                        </tr>
-                        <tr>
-                            <td align="left">1 Pkgs</td>
-                            <td align="left">SafAle English Ale (DCL Yeast #S-04)</td>
-                            <td align="left">Yeast-Ale</td>
-                            <td align="left"></td
-                        </tr>
-                        </tbody>
-                    </table>
-                </td>
-            </tr>
-            <tr>
-                <td colspan="2">&nbsp;</td>
-            </tr>
-            <tr>
-                <td colspan="2" bgcolor="#a9a9a9">
-                    <p class="text-center">
-                        Profile de la bière
-                    </p>
-                </td>
-            </tr>
-            <tr>
-                <td width="40%">
-                    <p style="margin-top: 0; margin-bottom: 0"><b><i>Est Original
-                                Gravity</i>:</b>
-                        1,071 SG</td>
-                <td width="52%"><i><b>Est Final Gravity:</b></i> 1,018 SG</td>
-            </tr>
-            <tr>
-                <td width="40%">
-                    <b><i>Estimated Alcohol by Vol</i></b><i><b>:</b></i> 7 % </td>
-                <td width="52%"><i><b>Bitterness:</b></i> 42.8 IBU</td>
-            </tr>
-            <tr>
-                <td width="40%">
-                    <i><b>Est Color:</b></i> 17,8 EBC</td>
-                <td width="52%"><b><i>Color</i>:</b> <TABLE><TD BGCOLOR="#be8b3a"><FONT COLOR="#be8b3a"> Color </FONT></TD></TABLE></td>
-            </tr>
-            <tr>
-                <td colspan="2" bgcolor="#a9a9a9">
-                    <p class="text-center">
-                        Mash profile
-                    </p>
-                </td>
-            </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="col-lg-10 col-lg-offset-1">
+        <table class="table table-borderless table-condensed table-hover">
+            <caption>
+                <h4>Mash profile</h4>
+            </caption>
+            <?php
+            $mash_info=$bdd->query($sql_mash_info);
+            $dataMashInfo=$mash_info->fetch();
+            ?>
             <tr>
                 <td width="40%">
                     <b><i>Mash Name</i>:</b>
-                    Infusion, Batch Sparge</td>
+                    <?php echo $dataMashInfo['Mash_name']; ?></td>
                 <td width="52%"><b><i>Total Grain Weight</i>:</b>
-                    6,20 kg</td>
+                    <?php echo $dataMashInfo['Total_grain']; ?></td>
             </tr>
             <tr>
                 <td width="40%">
                     <b><i>Sparge Water</i>:</b>
-                    12,8 L</td>
-                <td width="52%"><b><i>Sparge Temperature</i>:</b> 78 C</td>
+                    <?php echo $dataMashInfo['Sparge_water']; ?></td>
+                <td width="52%"><b><i>Sparge Temperature</i>:</b> <?php echo $dataMashInfo['Sparge_temp']; ?></td>
             </tr>
+        </table>
+    </div>
+    <div class="col-lg-10 col-lg-offset-1">
+        <table class="table table-hover table-striped table-condensed">
+            <thead>
             <tr>
-                <td colspan="2">
-                    <p class="text-center">
-                    <table width="100%%" cellspacing="0" cellpadding="0">
-                        <caption><u><b>Single Infusion, Full Body, Batch Sparge</b></u></caption>
+                <th>Step time</th>
+                <th>Name</th>
+                <th>Description</th>
+                <th>Step temp</th>
+            </tr>
+            </thead>
+            <tbody>
+            <?php
+            $mash_step=$bdd->query($sql_mash_step);
+            while($dataMashStep = $mash_step->fetch())
+            {
+                ?>
+                <tr>
+                    <td><?php echo $dataMashStep['Step_time']; ?></td>
+                    <td><?php echo $dataMashStep['Name']; ?></td>
+                    <td><?php echo $dataMashStep['Description']; ?></td>
+                    <td><?php echo $dataMashStep['Step_temp']; ?></td>
+                </tr>
+                <?php
+            }
 
-                        <tbody>
-                        <tr>
-                            <th width="16%" align="left">Step Time</th>
-                            <th width="23%" align="left">Name</th>
-                            <th width="44%" align="left">Description</th>
-                            <th width="16%" align="left">Step Temp</th>
-                        </tr>
-                        <tr>
-                            <td align="left">90 min</td>
-                            <td align="left">Monopalier</td>
-                            <td align="left">Add 12,8 L of water at 72 C</td>
-                            <td align="left">68,0 C</td>
-                        </tr>
-
-                        <tr>
-                            <td align="left">10 min</td>
-                            <td align="left">Mash Out</td>
-                            <td align="left">Heat at 78,0 C</td>
-                            <td align="left">78,0 C</td>
-                        </tr>
+            ?>
             </tbody>
         </table>
     </div>
-    <!--div class="starter-template"-->
-        <h3>Commentaire :</h3>
-        <p>DI : 1077</p>
-        <p>DF : 1037</p>
-        <p>Je pense que la densité est resté haute à caude de la chaleur dans la maisson l'été! (25-26°)</p>
+    <div class="col-lg-10 col-lg-offset-1">
+        <table class="table table-borderless table-condensed table-hover">
+            <caption>
+                <h4>Fermentation </h4>
+            </caption>
+            <tbody>
+            <?php
+            $fermentation=$bdd->query($sql_fermentation);
+            $datafermentation=$fermentation->fetch();
+            ?>
+            <tr>
+                <td colspan="2"><em><strong>Primaire :</strong></em> <?php echo $datafermentation['Primaire']; ?></td>
+            </tr>
+            <tr>
+                <td colspan="2"><strong><em>Secondaire</em></strong> <em><strong>:</strong></em> <?php echo $datafermentation['Secondaire']; ?></td>
+            </tr>
+            <tr>
+                <td colspan="2"><em><strong>Sucre à l'embouteillage :</strong></em> <?php echo $datafermentation['Sucre']; ?></td>
+            </tr>
+            </tbody>
+        </table>
     </div>
 
+    <!--div class="col-lg-10 col-lg-offset-1">
+        <table class="table table-hover table-striped table-condensed">
+            <caption>
+                <h4>Commentaires : </h4>
+            </caption>
+            <tbody>
+            <?php
+    $fermentation=$bdd->query($sql_fermentation);
+    $datafermentation=$fermentation->fetch();
+    ?>
+            <tr>
+                <td colspan="2"><em><strong>Primaire :</strong></em> <?php echo $datafermentation['Primaire']; ?></td>
+            </tr>
+            </tbody>
+        </table>
+    </div-->
+</div>
 </div><!-- /.container -->
+</body>
