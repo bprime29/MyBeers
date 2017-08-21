@@ -4,7 +4,8 @@
 <meta http-equiv="Content-type" content="text/html; charset=iso-8859-1" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="">
+<meta name="description" content="Ty brasseur, brassage amateur, bière artisanale">
+<meta name="keywords" content="Ty brasseur, brassage, amateur, bière, empâtage, fermentation">
 <meta name="author" content="bprime" />
 <head>
     <?php
@@ -39,7 +40,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#">Mes brassins</a>
+            <a class="navbar-brand" href="#">Ty brasseur</a>
         </div>
         <div id="navbar" class="collapse navbar-collapse">
             <ul class="nav navbar-nav">
@@ -61,6 +62,14 @@
                     <button type="submit" class="btn btn-primary btn-sm"><span class="glyphicon glyphicon-eye-open"></span> Chercher</button>
                 </div>
             </form>
+            <ul class="nav navbar-nav navbar-right">
+
+                <!--li><a href="{% url 'post_new' %}"<span class="glyphicon glyphicon-plus"></span></a></li>
+                <li><a href="{% url 'post_draft_list' %}"><span class="glyphicon glyphicon-edit"></span></a></li>
+                <li><p>Hello {{ user.username }} <small>(<a href="{% url 'logout' %}">Log out</a>)</small></p></li-->
+
+                <li><a href="{% url 'login' %}"<span class="glyphicon glyphicon-lock"></span></a></li>
+            </ul>
         </div><!--/.nav-collapse -->
     </div>
 </div>
