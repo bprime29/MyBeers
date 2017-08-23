@@ -41,7 +41,7 @@ include("includes/debut.php");
                         <div class="help-block with-errors"></div>
                     </div>
                 </div>
-                <button type="submit" id="form-submit" class="btn btn-success btn-lg pull-right ">Submit</button>
+                <button type="submit" id="form-submit" name="submit" class="btn btn-success btn-lg pull-right ">Submit</button>
                 <div id="msgSubmit" class="h3 text-center hidden"></div>
                 <div class="clearfix"></div>
             </form>
