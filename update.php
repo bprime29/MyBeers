@@ -7,6 +7,7 @@
  */
 $titre = "update";
 include("includes/config.php");
+include("includes/identifiants.php");
 include("includes/debut.php");
 ?>
 

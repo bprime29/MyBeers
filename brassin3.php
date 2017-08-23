@@ -7,6 +7,7 @@
  */
 $titre = "Brassin 3";
 include("includes/config.php");
+include("includes/identifiants.php");
 include("includes/debut.php");
 ?>
 <?php

@@ -5,8 +5,10 @@
  * Date: 13/06/2017
  * Time: 22:32
  */
+session_start();
 $titre = "Accueil";
 include("includes/config.php");
+include("includes/identifiants.php");
 include("includes/debut.php");
 
 ?>

@@ -29,6 +29,35 @@
     <link href="css/animate.css" rel="stylesheet">
 </head>
 
+
+<?php
+
+//Attribution des variables de session
+$lvl=(isset($_SESSION['level']))?(int) $_SESSION['level']:1;
+$id=(isset($_SESSION['id']))?(int) $_SESSION['id']:0;
+$pseudo=(isset($_SESSION['pseudo']))?$_SESSION['pseudo']:'';
+
+//Création des variables
+$ip = ip2long($_SERVER['REMOTE_ADDR']);
+
+//Requête
+$query=$db->prepare('INSERT INTO forum_whosonline VALUES(:id, :time,:ip)
+ON DUPLICATE KEY UPDATE
+online_time = :time , online_id = :id');
+$query->bindValue(':id',$id,PDO::PARAM_INT);
+$query->bindValue(':time',time(), PDO::PARAM_INT);
+$query->bindValue(':ip', $ip, PDO::PARAM_INT);
+$query->execute();
+$query->CloseCursor();
+$time_max = time() - (60 * 5);
+$query=$db->prepare('DELETE FROM forum_whosonline WHERE online_time < :timemax');
+$query->bindValue(':timemax',$time_max, PDO::PARAM_INT);
+$query->execute();
+$query->CloseCursor();
+//On inclue les 2 pages restantes
+include("./includes/functions.php");
+include("./includes/constants.php");
+?>
 <body>
 
 <div class="navbar navbar-inverse navbar-fixed-top">
@@ -67,8 +96,32 @@
                 <!--li><a href="{% url 'post_new' %}"<span class="glyphicon glyphicon-plus"></span></a></li>
                 <li><a href="{% url 'post_draft_list' %}"><span class="glyphicon glyphicon-edit"></span></a></li>
                 <li><p>Hello {{ user.username }} <small>(<a href="{% url 'logout' %}">Log out</a>)</small></p></li-->
+                <li class="dropdown">
+                    <?php
+                    if ($id!=0)
+                    {
+                        ?>
+                        <a data-toggle="dropdown" href="#"><span class="glyphicon glyphicon-unchecked"><b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="inscription.php">Gérer mon compte</a></li>
+                            <li><a href="connexion.php">Déconnecter</a></li>
+                        </ul>
+                        <?php
+                    }
 
-                <li><a href="{% url 'login' %}"<span class="glyphicon glyphicon-lock"></span></a></li>
+                    else
+                    {
+                        ?>
+                        <a data-toggle="dropdown" href="#"><span class="glyphicon glyphicon-lock"><b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="register.php">Inscription</a></li>
+                            <li><a href="connexion.php">Connexion</a></li>
+                        </ul>
+                        <?php
+                    }
+                    ?>
+                </li>
+                <!--li><a href="{% url 'login' %}"<span class="glyphicon glyphicon-lock"></span></a></li-->
             </ul>
         </div><!--/.nav-collapse -->
     </div>

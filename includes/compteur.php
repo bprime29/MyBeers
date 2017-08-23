@@ -8,7 +8,6 @@ catch(Exception $e)
 {
     die('Erreur : '.$e->getMessage());
 }
-$bdd->query($sql_ingredients);
 
 // -------
 // ÉTAPE 1 : on vérifie si l'IP se trouve déjà dans la table.
