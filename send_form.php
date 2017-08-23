@@ -43,5 +43,5 @@ if(!empty($errors)){ // si erreur on renvoie vers la page précédente
   </table>
   ';
     mail($to, $subject, $message_content, $headers);
-    header('Location: contact.php');
+    header('Location: contactn.php');
 }
