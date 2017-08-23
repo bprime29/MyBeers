@@ -12,7 +12,7 @@
     /**********Vérification du titre...*************/
 
     if(isset($titre) && trim($titre) != '')
-        $titre = $titre.' : '.TITRESITE;
+        $titre = ITRESITE.' : '.$titre;
 
     else
         $titre = TITRESITE;
