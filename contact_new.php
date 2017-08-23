@@ -5,7 +5,7 @@
  * Date: 6/14/17
  * Time: 2:10 PM
  */
-$titre = "Mes recettes";
+$titre = "Contact";
 include("includes/config.php");
 include("includes/debut.php");
 ?>
@@ -16,23 +16,30 @@ include("includes/debut.php");
     <div class="col-sm-6 col-sm-offset-3">
         <div class="well" style="margin-top: 10%;">
             <h3>Send me a message</h3>
-            <form role="form" id="contactForm" data-toggle="validator" class="shake">
+            <form role="form" id="contactForm" data-toggle="validator" class="shake" action="<?php echo strip_tags($_SERVER['REQUEST_URI']); ?>">
                 <div class="row">
                     <div class="form-group col-sm-6">
                         <label for="name" class="h4">Name</label>
-                        <input type="text" class="form-control" id="name" placeholder="Enter name" required data-error="NEW ERROR MESSAGE">
+                        <input type="text" class="form-control" id="name" name="nom" placeholder="Enter name" required data-error="NEW ERROR MESSAGE">
                         <div class="help-block with-errors"></div>
                     </div>
                     <div class="form-group col-sm-6">
                         <label for="email" class="h4">Email</label>
-                        <input type="email" class="form-control" id="email" placeholder="Enter email" required>
+                        <input type="email" class="form-control" id="email" name="email" placeholder="Enter email" required>
                         <div class="help-block with-errors"></div>
                     </div>
                 </div>
                 <div class="form-group">
                     <label for="message" class="h4 ">Message</label>
-                    <textarea id="message" class="form-control" rows="5" placeholder="Enter your message" required></textarea>
+                    <textarea id="message" name="message" class="form-control" rows="5" placeholder="Enter your message" required></textarea>
                     <div class="help-block with-errors"></div>
+                </div>
+                <div class="row">
+                    <div class="form-group col-sm-6">
+                        <label for="name" class="h4">Name</label>
+                        <p>Combien font 1+3: <span style="color:#ff0000;">*</span>: <input type="text" name="captcha" size="2" /></p>
+                        <div class="help-block with-errors"></div>
+                    </div>
                 </div>
                 <button type="submit" id="form-submit" class="btn btn-success btn-lg pull-right ">Submit</button>
                 <div id="msgSubmit" class="h3 text-center hidden"></div>
