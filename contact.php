@@ -10,18 +10,23 @@ include("includes/config.php");
 include("includes/debut.php");
 ?>
 
+<div class="row">
+    <div class="col-sm-6 col-sm-offset-3">
+        <div class="well" style="margin-top: 10%;">
+            <h3>Send me a message</h3>
+            <form method="post" action="<?php echo strip_tags($_SERVER['REQUEST_URI']); ?>">
+                <p>Votre nom et prénom: <input type="text" name="nom" size="30" /></p>
+                <p>Votre email: <span style="color:#ff0000;">*</span>: <input type="text" name="email" size="30" /></p>
+                <p>Message <span style="color:#ff0000;">*</span>:</p>
+                <textarea name="message" cols="60" rows="10"></textarea>
+                <!-- Ici pourra être ajouté un captcha anti-spam (plus tard) -->
+                <p>Combien font 1+3: <span style="color:#ff0000;">*</span>: <input type="text" name="captcha" size="2" /></p>
+                <p><input type="submit" name="submit" value="Envoyer" /></p>
+            </form>
+        </div>
+    </div>
+</div>
 
-<h1>Contacter le webmaster</h1>
-<!-- Ceci est un commentaire HTML. Le code PHP devra remplacer cette ligne -->
-<form method="post" action="<?php echo strip_tags($_SERVER['REQUEST_URI']); ?>">
-    <p>Votre nom et prénom: <input type="text" name="nom" size="30" /></p>
-    <p>Votre email: <span style="color:#ff0000;">*</span>: <input type="text" name="email" size="30" /></p>
-    <p>Message <span style="color:#ff0000;">*</span>:</p>
-    <textarea name="message" cols="60" rows="10"></textarea>
-    <!-- Ici pourra être ajouté un captcha anti-spam (plus tard) -->
-    <p>Combien font 1+3: <span style="color:#ff0000;">*</span>: <input type="text" name="captcha" size="2" /></p>
-    <p><input type="submit" name="submit" value="Envoyer" /></p>
-</form>
 </body>
 </html>
 
