@@ -27,6 +27,7 @@
     <script src="js/bootstrap.js"></script>
     <link href="css/bootstrap.css" rel="stylesheet">
     <link href="css/animate.css" rel="stylesheet">
+    <?php include_once("includes/analyticstracking.php");?>
 </head>
 
 <body>
