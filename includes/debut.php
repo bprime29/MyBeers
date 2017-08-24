@@ -101,10 +101,18 @@ include("./includes/constants.php");
                     if ($id!=0)
                     {
                         ?>
-                        <a data-toggle="dropdown" href="#"><span class="glyphicon glyphicon-unchecked"><b class="caret"></b></a>
+                        <a data-toggle="dropdown" href="#">Bienvenue <?php echo $pseudo?> <b class="caret"></b></a>
                         <ul class="dropdown-menu">
-                            <li><a href="inscription.php">Gérer mon compte</a></li>
-                            <li><a href="connexion.php">Déconnecter</a></li>
+                            <?php
+                            if ($lvl==4)
+                            {
+                                ?>
+                                <li><a href="formulaire.php">Formulaire</a></li>
+                            <?php
+                            }
+                            ?>
+                            <li><a href="voirprofil.php?m=<?php echo $id; ?>&amp;action=modifier">Gérer mon compte</a></li>
+                            <li><a href="deconnexion.php">Déconnecter</a></li>
                         </ul>
                         <?php
                     }

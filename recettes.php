@@ -5,6 +5,7 @@
  * Date: 14/06/2017
  * Time: 22:32
  */
+session_start();
 $titre = "Mes recettes";
 include("includes/config.php");
 include("includes/identifiants.php");
