@@ -6,7 +6,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="Ty brasseur, brassage amateur, bière artisanale">
 <meta name="keywords" content="Ty brasseur, brassage, amateur, bière, empâtage, fermentation">
-<meta name="google-site-verification" content="KaO7PLBwrwRjaUbrUrj_B-4euSaSyCToTxL94j5ExRc" />
 <meta name="author" content="bprime" />
 <head>
     <?php
@@ -23,12 +22,14 @@
     <title><?php echo $titre; ?></title>
     <link rel="icon" type="image/png" href="images/icon.png" />
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="google-site-verification" content="KaO7PLBwrwRjaUbrUrj_B-4euSaSyCToTxL94j5ExRc" />
     <link rel="stylesheet" title="Design" href="css/design.css" type="text/css" media="screen" />
     <script src="js/jquery.js"></script>
     <script src="js/bootstrap.js"></script>
     <link href="css/bootstrap.css" rel="stylesheet">
     <link href="css/animate.css" rel="stylesheet">
-    
+    <?php include_once("includes/analyticstracking.php");?>
+
 </head>
 
 <body>
