@@ -6,6 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="Ty brasseur, brassage amateur, bière artisanale">
 <meta name="keywords" content="Ty brasseur, brassage, amateur, bière, empâtage, fermentation">
+<meta name="google-site-verification" content="KaO7PLBwrwRjaUbrUrj_B-4euSaSyCToTxL94j5ExRc" />
 <meta name="author" content="bprime" />
 <head>
     <?php
