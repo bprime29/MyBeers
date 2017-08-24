@@ -8,6 +8,7 @@
 $titre = "Contact";
 include("includes/config.php");
 include("includes/debut.php");
+include_once("includes/analyticstracking.php");
 ?>
 
 <div class="row">

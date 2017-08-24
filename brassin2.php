@@ -8,6 +8,7 @@
 $titre = "Brassin 2";
 include("includes/config.php");
 include("includes/debut.php");
+include_once("includes/analyticstracking.php");
 ?>
 <?php
 try
