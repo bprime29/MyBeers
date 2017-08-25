@@ -22,11 +22,14 @@
     <title><?php echo $titre; ?></title>
     <link rel="icon" type="image/png" href="images/icon.png" />
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="google-site-verification" content="KaO7PLBwrwRjaUbrUrj_B-4euSaSyCToTxL94j5ExRc" />
     <link rel="stylesheet" title="Design" href="css/design.css" type="text/css" media="screen" />
     <script src="js/jquery.js"></script>
     <script src="js/bootstrap.js"></script>
     <link href="css/bootstrap.css" rel="stylesheet">
     <link href="css/animate.css" rel="stylesheet">
+    <?php include_once("includes/analyticstracking.php");?>
+
 </head>
 
 
@@ -59,7 +62,7 @@ include("./includes/functions.php");
 include("./includes/constants.php");
 ?>
 <body>
-
+<?php include_once("includes/analyticstracking.php");?>
 <div class="navbar navbar-inverse navbar-fixed-top">
     <div class="container">
         <div class="navbar-header">
