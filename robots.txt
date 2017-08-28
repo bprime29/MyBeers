@@ -1,0 +1,12 @@
+User-agent: *
+Disallow: /update.php
+Disallow: /test.php
+Disallow: /register.php
+Disallow: /resultats_recherche.php
+Disallow: /recherche.php
+Disallow: /formulaire.php
+Disallow: /formulairewithlist.php
+Disallow: /contact_new.php
+Disallow: /brassinX.php
+Disallow: /js/
+Disallow: /includes/
