@@ -1,12 +1,5 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
 <html>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta http-equiv="Content-type" content="text/html; charset=iso-8859-1" />
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Ty brasseur, brassage amateur, bière artisanale">
-<meta name="keywords" content="Ty brasseur, brassage, amateur, bière, empâtage, fermentation">
-<meta name="author" content="bprime" />
 <head>
     <?php
     /**********Vérification du titre...*************/
@@ -20,16 +13,22 @@
     /***********Fin vérification titre...************/
     ?>
     <title><?php echo $titre; ?></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-type" content="text/html; charset=iso-8859-1" />
     <link rel="icon" type="image/png" href="images/icon.png" />
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta name="google-site-verification" content="KaO7PLBwrwRjaUbrUrj_B-4euSaSyCToTxL94j5ExRc" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Ty brasseur, brassage amateur, bière artisanale">
+    <meta name="keywords" content="Ty brasseur, brassage, amateur, bière, empâtage, fermentation, recettes">
+    <meta name="author" content="bprime" />
     <link rel="stylesheet" title="Design" href="css/design.css" type="text/css" media="screen" />
     <script src="js/jquery.js"></script>
     <script src="js/bootstrap.js"></script>
     <link href="css/bootstrap.css" rel="stylesheet">
     <link href="css/animate.css" rel="stylesheet">
     <?php include_once("includes/analyticstracking.php");?>
-
 </head>
 
 
