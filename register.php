@@ -198,7 +198,7 @@ else //On est dans le cas traitement
 	//Titre
 	$titre = "Inscription à mon super forum !";
 
-	#mail($_POST['email'], $titre, $message);
+	mail($_POST['email'], $titre, $message);
     }
     else
     {
