@@ -30,14 +30,21 @@
 		"position": 3,
 		"item": {
 			"@id": "https://tybrasseur.fr/brassin1.php",
-			"name": "Uploading an image via a REST API with Symfony 3 and Javascript"
+			"name": "Brassin 1 : Blonde simple au combava"
 		}
 	}, {
 		"@type": "ListItem",
 		"position": 3,
 		"item": {
 			"@id": "https://tybrasseur.fr/brassin2.php",
-			"name": "Uploading an image via a REST API with Symfony 3 and Javascript"
+			"name": "Brassin 2 : English India Pale Ale"
+		}
+	}, {
+		"@type": "ListItem",
+		"position": 3,
+		"item": {
+			"@id": "https://tybrasseur.fr/brassin3.php",
+			"name": "Brassin 3 : Bière douce rubis profond"
 		}
 	}]
 }
