@@ -15,22 +15,34 @@
     "@type": "ListItem",
     "position": 1,
     "item": {
-      "@id": "https://www.pierrefay.com/",
-      "name": "HOME"
+      "@id": "https://tybrasseur.fr/",
+      "name": "Accueil"
     }
   },{
     "@type": "ListItem",
     "position": 2,
     "item": {
-      "@id": "https://www.pierrefay.com/blog.html",
-      "name": "Blog"
+      "@id": "https://tybrasseur.fr/recettes.php",
+      "name": "Mes recettes"
     }
   },{
     "@type": "ListItem",
     "position": 3,
     "item": {
-      "@id": "https://www.pierrefay.com/blog/upload-image-js-api-rest-symfony3.html",
-      "name": "Uploading an image via a REST API with Symfony 3 and Javascript"
+      "@id": "https://tybrasseur.fr/brassin1.php",
+      "name": "Brassin 1 : Blonde simple au combava"
+    },{
+    "@type": "ListItem",
+    "position": 3,
+    "item": {
+      "@id": "https://tybrasseur.fr/brassin2.php",
+      "name": "Brassin 2 : English India Pale Ale"
+    },{
+    "@type": "ListItem",
+    "position": 3,
+    "item": {
+      "@id": "https://tybrasseur.fr/brassin3.php",
+      "name": "Brassin 3 : Bière douce rubis profond"
     }
   }]
 }
