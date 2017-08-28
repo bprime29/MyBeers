@@ -59,6 +59,7 @@ $query->CloseCursor();
 //On inclue les 2 pages restantes
 include("./includes/functions.php");
 include("./includes/constants.php");
+include("./includes/microdonnees.php")
 ?>
 <body>
 <?php include_once("includes/analyticstracking.php");?>
