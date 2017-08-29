@@ -38,3 +38,61 @@ function mash_step() {
 function remove_mash_step(rid) {
     $('.removeclass'+rid).remove();
 }
+
+function brixToSg(densB){
+
+    if (densB=='' || isNaN(densB)) {
+        alert("Veuillez remplir les champs avec des valeurs numeriques coherentes !");
+    }
+    else {
+        // conversion en densite specifique
+        //B = 1.000019 + (0.003865613*densB + 0.00001296425*densB*densB + 0.00000005701128*densB*densB*densB);
+        B= (densB / (258.6 - ((densB / 258.2) * 227.1)))+1;
+        B2 = B * 1000;
+        document.forms['densite_brix'].densS.value = Math.round(B2);
+        // conversion en Plato
+        P = densB / 1.04;
+        document.forms['densite_brix'].densP.value = P.toFixed(2);
+
+    }
+}
+
+function brixToSgFerm(densBO,densBC){
+
+    if (densBO=='' || densBC=='' || isNaN(densBO) || isNaN(densBC)) {
+        alert("Veuillez remplir les champs avec des valeurs numeriques coherentes !");
+    }
+    else {
+        // conversion en densite specifique
+        B= 1.001843-0.002318474*densBO-0.000007775*densBO*densBO-0.000000034*densBO*densBO*densBO+0.00574*densBC+0.00003344*densBC*densBC+0.000000086*(densBC*densBC*densBC);
+        B2 = B * 1000;
+        document.forms['densite_brix_ferm'].densS.value = Math.round(B2);
+    }
+}
+
+function calcalc(og, fg, sucre) {
+
+    if (og=='' || fg=='' || sucre=='' || og < fg || isNaN(og) || isNaN(fg) || isNaN(sucre)) {
+        alert("Veuillez remplir les champs avec des valeurs numeriques coherentes !");
+    }
+    else {
+
+        // pour remplir le champ dens avec l'alcool avant refermentation
+        dens1 = (og - fg) * 1.05;
+        dens1 = (((dens1 / fg) * 100) / 0.795);
+        document.forms['calculalc'].dens.value = dens1.toFixed(2);
+
+        // pour remplir le champ referm avec l'alcool apporté par la refermentation
+        referm1 = (((sucre * 0.5) / 0.795) /10);
+        document.forms['calculalc'].referm.value = referm1.toFixed(2);
+
+        // pour remplir le champ ref_tot avec l'alcool total dans la bière
+        ref_tot1 = dens1 + referm1;
+        document.forms['calculalc'].ref_tot.value = ref_tot1.toFixed(2);
+
+        // pour remplir le champ attenuation apparente
+        attenuation = (((og - fg) / 1000) / ((og/1000) -1)) * 100;
+        document.forms['calculalc'].attenuation.value = attenuation.toFixed(2);
+
+    }
+}

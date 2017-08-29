@@ -11,6 +11,8 @@ include("includes/config.php");
 include("includes/identifiants.php");
 include("includes/debut.php");
 ?>
+<script src="js/fonction.js"></script>
+
 <div class="container">
 
     <div class="col-lg-10 col-lg-offset-1">
@@ -55,32 +57,7 @@ include("includes/debut.php");
 <script type="text/javascript">
     <!--
 
-    function calcalc(og, fg, sucre) {
 
-        if (og=='' || fg=='' || sucre=='' || og < fg || isNaN(og) || isNaN(fg) || isNaN(sucre)) {
-            alert("Veuillez remplir les champs avec des valeurs numeriques coherentes !");
-        }
-        else {
-
-            // pour remplir le champ dens avec l'alcool avant refermentation
-            dens1 = (og - fg) * 1.05;
-            dens1 = (((dens1 / fg) * 100) / 0.795);
-            document.forms['calculalc'].dens.value = dens1.toFixed(2);
-
-            // pour remplir le champ referm avec l'alcool apporté par la refermentation
-            referm1 = (((sucre * 0.5) / 0.795) /10);
-            document.forms['calculalc'].referm.value = referm1.toFixed(2);
-
-            // pour remplir le champ ref_tot avec l'alcool total dans la bière
-            ref_tot1 = dens1 + referm1;
-            document.forms['calculalc'].ref_tot.value = ref_tot1.toFixed(2);
-
-            // pour remplir le champ attenuation apparente
-            attenuation = (((og - fg) / 1000) / ((og/1000) -1)) * 100;
-            document.forms['calculalc'].attenuation.value = attenuation.toFixed(2);
-
-        }
-    }
 
     //-->
 </script>
