@@ -82,14 +82,23 @@ include("./includes/microdonnees.php")
                     <ul class="dropdown-menu">
                         <li><a href="recettes.php">Mes recettes</a></li>
                         <li><a href="#">Le matériel</a></li>
-                        <li class="divider"></li>
+                        <!--li class="divider"></li>
                         <li class="dropdown-submenu">
                             <a tabindex="-1" href="#"><span class="glyphicon glyphicon-list-alt"></span> Outils</a>
                             <ul class="dropdown-menu">
                                 <li><a href="calc_avec_refracto.php">Calcul taux d'alcool avec réfracomètre</a></li>
                                 <li><a href="outils.php">Calcul taux d'alcool avec densimètre</a></li>
                             </ul>
-                        </li>
+                        </li-->
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a data-toggle="dropdown" href="#">Outils<b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="calc_avec_refracto.php">Calcul taux d'alcool avec réfracomètre</a></li>
+                        <li><a href="outils.php">Calcul taux d'alcool avec densimètre</a></li>
+                        <li class="divider"></li>
+                        <li><a href="lien.php">Liens</a></li>
                     </ul>
                 </li>
                 <li><a href="contact.php">Contact</a></li>
