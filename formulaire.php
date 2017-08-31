@@ -7,6 +7,8 @@ session_start();
  * Time: 1:52 PM
  */
 $titre = "Formulaire";
+$description = "";
+
 include("includes/config.php");
 include("includes/identifiants.php");
 include("includes/debut.php");

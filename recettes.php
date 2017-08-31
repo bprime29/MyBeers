@@ -6,11 +6,13 @@
  * Time: 22:32
  */
 session_start();
+$description = "Les différentes recettes de bière que j'ai réalisée";
 $titre = "Mes recettes";
 include("includes/config.php");
 include("includes/identifiants.php");
 include("includes/debut.php");
 include_once("includes/analyticstracking.php");
+
 ?>
 
 <div class="container">

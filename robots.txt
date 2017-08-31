@@ -1,4 +1,7 @@
 User-agent: *
+Disallow: /connexion.php
+Disallow: /deconnexion.php
+Disallow: /voirprofil.php
 Disallow: /update.php
 Disallow: /test.php
 Disallow: /register.php

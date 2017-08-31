@@ -6,11 +6,13 @@ session_start();
  * Date: 6/14/17
  * Time: 4:31 PM
  */
-$titre = "Brassin 3";
+$titre = "Bière douce rubis profond";
+$description = "Recette d'une bière rouge d'automne";
 include("includes/config.php");
 include("includes/identifiants.php");
 include("includes/debut.php");
 include_once("includes/analyticstracking.php");
+
 ?>
 <?php
 try

@@ -1,6 +1,7 @@
 ﻿<?php
 session_start();
 $titre="Profil";
+$description = "gérer son profil";
 include('includes/config.php');
 include("includes/identifiants.php");
 include("includes/debut.php");

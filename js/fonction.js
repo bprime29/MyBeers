@@ -84,7 +84,7 @@ function calcalc(og, fg, sucre) {
 
         // pour remplir le champ referm avec l'alcool apporté par la refermentation
         referm1 = (((sucre * 0.5) / 0.795) /10);
-        document.forms['calculalc'].referm.value = referm1.toFixed(2);
+        // document.forms['calculalc'].referm.value = referm1.toFixed(2);
 
         // pour remplir le champ ref_tot avec l'alcool total dans la bière
         ref_tot1 = dens1 + referm1;
@@ -92,7 +92,7 @@ function calcalc(og, fg, sucre) {
 
         // pour remplir le champ attenuation apparente
         attenuation = (((og - fg) / 1000) / ((og/1000) -1)) * 100;
-        document.forms['calculalc'].attenuation.value = attenuation.toFixed(2);
+        // document.forms['calculalc'].attenuation.value = attenuation.toFixed(2);
 
     }
 }

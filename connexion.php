@@ -1,6 +1,7 @@
 ﻿<?php
 session_start();
 $titre="Connexion";
+$description = "Connexion";
 include('includes/config.php');
 include("includes/identifiants.php");
 include("includes/debut.php");

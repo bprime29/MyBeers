@@ -7,6 +7,8 @@
  */
 session_start();
 $titre = "Accueil";
+$description = "Ty brasseur : l'objectif de ce site est de partager mes expériences en tant que brasseur amateur";
+$keywords = "Ty brasseur, brassage, amateur, bière, empâtage, fermentation, recettes";
 include("includes/config.php");
 include("includes/identifiants.php");
 include("includes/debut.php");
@@ -19,6 +21,7 @@ include("includes/debut.php");
     <div class="starter-template">
         <h1>Mes expériences en tant que "brasseur amateur"</h1>
         <p class="lead">Petite présentation de mon expérience.</p>
+        <p class="lead">(site encore en construction)</p>
     </div>
     <div id="myCarousel" class="carousel slide" data-ride="carousel">
         <!-- Indicators -->

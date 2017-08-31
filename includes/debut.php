@@ -20,8 +20,8 @@
     <meta name="google-site-verification" content="KaO7PLBwrwRjaUbrUrj_B-4euSaSyCToTxL94j5ExRc" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Ty brasseur, brassage amateur, bière artisanale">
-    <meta name="keywords" content="Ty brasseur, brassage, amateur, bière, empâtage, fermentation, recettes">
+    <meta name="description" content="<?php echo $description; ?>">
+    <!--meta name="keywords" content="<?php echo $description; ?>"-->
     <meta name="author" content="bprime" />
     <link rel="stylesheet" title="Design" href="css/design.css" type="text/css" media="screen" />
     <script src="js/jquery.js"></script>

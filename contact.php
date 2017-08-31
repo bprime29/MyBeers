@@ -7,6 +7,7 @@ session_start();
  * Time: 2:10 PM
  */
 $titre = "Contact";
+$descritpion = "Prenez contact avec moi!";
 include("includes/config.php");
 include("includes/identifiants.php");
 include("includes/debut.php");

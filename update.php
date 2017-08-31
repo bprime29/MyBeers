@@ -7,6 +7,7 @@ session_start();
  * Time: 2:36 PM
  */
 $titre = "update";
+$description = "update";
 include("includes/config.php");
 include("includes/identifiants.php");
 include("includes/debut.php");

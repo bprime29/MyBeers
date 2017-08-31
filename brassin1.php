@@ -6,11 +6,13 @@ session_start();
  * Date: 6/14/17
  * Time: 4:31 PM
  */
-$titre = "Brassin 1";
+$titre = "Blonde simple au combava";
+$description = "Une recette de bière blonde simple, agrémentée de combava";
 include("includes/config.php");
 include("includes/identifiants.php");
 include("includes/debut.php");
 include_once("includes/analyticstracking.php");
+
 ?>
 <?php
 try

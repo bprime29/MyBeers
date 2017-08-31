@@ -6,7 +6,8 @@ session_start();
  * Date: 6/14/17
  * Time: 4:31 PM
  */
-$titre = "Brassin 2";
+$titre = "English India Pale Ale";
+$description = "Recette de ma première bière style IPA (India Pale Ale)";
 include("includes/config.php");
 include("includes/identifiants.php");
 include("includes/debut.php");

@@ -5,7 +5,8 @@
  * Date: 13/06/2017
  * Time: 22:32
  */
-$titre = "Accueil";
+$titre = "Resultats de recherche";
+$description="Résultats de recherche";
 include("includes/config.php");
 include("includes/identifiants.php");
 include("includes/debut.php");
