@@ -90,7 +90,7 @@ include("includes/debut.php");
                     </span>
                 </h4>
                 <img src="images/brassin2.jpg" alt="...">
-                <a href="brassin2.phpra" class="btn btn-primary col-xs-12" role="button">Recette ici!</a>
+                <a href="brassin2.php" class="btn btn-primary col-xs-12" role="button">Recette ici!</a>
                 <div class="clearfix"></div>
             </div>
         </div>
