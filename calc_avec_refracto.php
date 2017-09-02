@@ -17,7 +17,8 @@ include("includes/debut.php");
 <div class="container">
     <h1 align="center">Calcul du taux d'alcool avec réfractomètre</h1>
     <div class="row">
-        <img src="images/vertex-refractometre-rf-1.jpg" >
+        <div class="col-lg-6" align="center"><img src="images/vertex-refractometre-rf-1.jpg" alt="réfractomètre"></div>
+        <div class="col-lg-6" align="center"><img src="images/refractometre3.jpg" alt="Vue dans réfractomètre"></div>
     </div>
     <!--h3>Conversion de la densité en Brix en densité spécifique pour le moût avant fermentation</h3>
     <form  name="densite_brix" title="conversion densite en Brix en densite specifique pour le moût avant fermentation" action="refractometre.php">
