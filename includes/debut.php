@@ -28,6 +28,7 @@
     <script src="js/bootstrap.js"></script>
     <link href="css/bootstrap.css" rel="stylesheet">
     <link href="css/animate.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Fira+Sans" rel="stylesheet">
     <?php include_once("includes/analyticstracking.php");?>
 </head>
 
@@ -81,7 +82,7 @@ include("./includes/microdonnees.php")
                     <a data-toggle="dropdown" href="#">Brassage<b class="caret"></b></a>
                     <ul class="dropdown-menu">
                         <li><a href="recettes.php">Mes recettes</a></li>
-                        <li><a href="#">Le matériel</a></li>
+                        <li><a href="materiel.php">Le matériel</a></li>
                         <!--li class="divider"></li>
                         <li class="dropdown-submenu">
                             <a tabindex="-1" href="#"><span class="glyphicon glyphicon-list-alt"></span> Outils</a>
