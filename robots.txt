@@ -13,3 +13,4 @@ Disallow: /contact_new.php
 Disallow: /brassinX.php
 Disallow: /js/
 Disallow: /includes/
+Disallow: /fullcalendar-3.5.1/
