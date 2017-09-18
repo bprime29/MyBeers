@@ -32,6 +32,10 @@ $sql_calendar="select * from calendrier order by id";
 $data=$bdd->query($sql_calendar);
 ?>
 
+<?php
+print ROOTPATH + "/includes/add_events.php";
+?>
+
 <script type="text/javascript">
     $(document).ready(function() {
 
