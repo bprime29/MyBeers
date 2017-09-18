@@ -33,7 +33,7 @@ $data=$bdd->query($sql_calendar);
 ?>
 
 <?php
-print ROOTPATH + "/includes/add_events.php";
+print ROOTPATH;
 ?>
 
 <script type="text/javascript">
