@@ -85,5 +85,9 @@ print ROOTPATH + "/includes/add_events.php";
 </script>
 
 <div class="container">
+    <?php
+    print ROOTPATH + "/includes/add_events.php";
+    ?>
+
     <div id='calendar'></div>
 </div>
