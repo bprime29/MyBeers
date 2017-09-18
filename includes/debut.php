@@ -132,7 +132,7 @@ include("./includes/microdonnees.php")
                             }
                             ?>
                             <?php
-                            if ($lvl==2)
+                            if ($lvl>=2)
                             {
                                 ?>
                                 <li><a href="calendrier.php">Formulaire</a></li>
