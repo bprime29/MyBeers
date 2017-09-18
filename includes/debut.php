@@ -131,6 +131,14 @@ include("./includes/microdonnees.php")
                             <?php
                             }
                             ?>
+                            <?php
+                            if ($lvl==2)
+                            {
+                                ?>
+                                <li><a href="calendrier.php">Formulaire</a></li>
+                                <?php
+                            }
+                            ?>
                             <li><a href="voirprofil.php?m=<?php echo $id; ?>&amp;action=modifier">Gérer mon compte</a></li>
                             <li><a href="deconnexion.php">Déconnecter</a></li>
                         </ul>
