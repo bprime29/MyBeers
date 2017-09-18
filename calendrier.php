@@ -32,10 +32,6 @@ $sql_calendar="select * from calendrier order by id";
 $data=$bdd->query($sql_calendar);
 ?>
 
-<?php
-print ROOTPATH;
-?>
-
 <script type="text/javascript">
     $(document).ready(function() {
 
@@ -85,9 +81,5 @@ print ROOTPATH;
 </script>
 
 <div class="container">
-    <?php
-    print ROOTPATH + "/includes/add_events.php";
-    ?>
-
     <div id='calendar'></div>
 </div>
