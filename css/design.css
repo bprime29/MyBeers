@@ -9,6 +9,17 @@
 .table1{
     width: 77%;
 }
+.titrePage {
+    font-family: 'Sedgwick Ave Display', cursive;
+}
+
+p {
+    font-family: 'Open Sans', sans-serif;
+}
+
+.margeImage {
+    margin: 0 2% 2% 2%;
+}
 
 .topleft {
     width: 40%;
