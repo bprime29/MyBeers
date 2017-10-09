@@ -15,7 +15,7 @@ include_once("includes/analyticstracking.php");
 
 ?>
 
-<div class="container">
+<div class="container font_white">
     <h1>Présentation du matériel utilisé</h1>
     <p class="lead">Voici une rapide présentation du matériel que j'utilise pour réaliser mes bières.</p>
     <h3>Un moulin à malt</h3>

@@ -32,7 +32,7 @@ $sql_fermentation="SELECT * FROM fermentation WHERE Brassin='$name'";
 $sql_mash_step="SELECT * FROM mash_step WHERE Brassin='$name'";
 $sql_mash_info="SELECT * FROM mash_info WHERE Brassin='$name'";
 ?>
-<div class="container">
+<div class="container font_white">
 
     <div class="starter-template">
         <h1><?php echo $name; ?></h1>

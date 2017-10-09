@@ -14,7 +14,7 @@ include("includes/identifiants.php");
 include("includes/debut.php");
 ?>
 
-<div class="container" xmlns="http://www.w3.org/1999/html">
+<div class="container font_white" xmlns="http://www.w3.org/1999/html">
     <script type="text/javascript">
         $(document).ready( function() {
             $('[data-toggle="tooltip"]').tooltip();

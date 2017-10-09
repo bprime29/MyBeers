@@ -14,7 +14,7 @@ include("includes/debut.php");
 ?>
 <script src="js/fonction.js"></script>
 
-<div class="container">
+<div class="container font_white">
     <h1 align="center">Calcul du taux d'alcool avec réfractomètre</h1>
     <div class="row">
         <div class="col-lg-6" align="center"><img src="images/vertex-refractometre-rf-1.jpg" alt="réfractomètre"></div>

@@ -14,7 +14,7 @@ include("includes/debut.php");
 ?>
 <script src="js/fonction.js"></script>
 
-<div class="container">
+<div class="container font_white">
     <form class="form-horizontal col-lg-6 col-lg-offset-2" action="refractometre.php" name="calculalc" id="calculalc">
         <div class="form-group">
             <legend align="center">Taux d'alcool de la bière</legend>

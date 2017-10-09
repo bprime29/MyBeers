@@ -30,6 +30,7 @@ $sql_fermentation="SELECT * FROM fermentation WHERE Brassin='$name'";
 $sql_mash_step="SELECT * FROM mash_step WHERE Brassin='$name'";
 $sql_mash_info="SELECT * FROM mash_info WHERE Brassin='$name'";
 ?>
+<link href="css/timeline_recette.css" rel="stylesheet">
 <div class="container">
 
     <div class="starter-template">
@@ -37,6 +38,108 @@ $sql_mash_info="SELECT * FROM mash_info WHERE Brassin='$name'";
         <p class="lead">Pour mon premier brassin, je suis parti sur une recette de bière blonde simple. J'y ai rajouté un combava pour lui rajouter une petite note exotique.</p>
         <p align="center">Quelques photos sont disponible <a href="https://goo.gl/photos/6BA9mZiJzFsnFB9v8">ici</a></p>
     </div>
+
+    <ul class="nav nav-tabs tabs tabs-top" style="width: 100%">
+        <li class="tab active">
+        <a href="#mashing" data-toggle="tab" target="_blank">
+            Empâtage
+        </a>
+        </li>
+        <li class="tab">
+        <a href="#boil" data-toggle="tab" target="_blank">
+            Ebullition
+        </a>
+        </li>
+        <li class="tab">
+        <a href="#">
+            emp
+        </a>
+        </li>
+    </ul>
+
+    <div class="tab-content">
+        <div class="tab-pane active" id="mashing">
+            <ul class="timeline">
+                <li>
+                    <div class="timeline-badge success"><i class="fa fa-flask"> </i></div>
+                    <div class="timeline-panel">
+                        <div class="timeline-body">Activer la levure</div>
+                    </div>
+                </li>
+                <li>
+                    <div class="timeline-badge primary"><i class="fa fa-gavel"> </i></div>
+                    <div class="timeline-panel">
+                        <div class="timeline-body">Concasser le malt</div>
+                    </div>
+                </li>
+                <li>
+                    <div class="timeline-badge danger"><i class="fa fa-fire"> </i></div>
+                    <div class="timeline-panel">
+                        <div class="timeline-body">Faire chauffer 18 L d&rsquo;eau</div>
+                    </div>
+                </li>
+                <li>
+                    <div class="timeline-badge success"><i class="fa fa-spoon"> </i></div>
+                    <div class="timeline-panel">
+                        <div class="timeline-body"><strong>Mono-palier</strong> à 68°C pendant 60 minutes</div>
+                    </div>
+                </li>
+                <li>
+                    <div class="timeline-badge success"><i class="fa fa-spoon"> </i></div>
+                    <div class="timeline-panel">
+                        <div class="timeline-body">Palier de <strong>désactivation des enzymes</strong> (mash-out) à 78°C pendant 10 minutes</div>
+                    </div>
+                </li>
+                <li>
+                    <div class="timeline-badge info"><i class="fa fa-tint"> </i></div>
+                    <div class="timeline-panel">
+                        <div class="timeline-body">Filtrer et laver les drêches avec <strong>18 L d&rsquo;eau à 80°C.</strong> <em>Adapter le volume d&rsquo;eau en fonction de la quantité de moût obtenue</em></div>
+                    </div>
+            </ul>
+        </div>
+        <div class="tab-pane" id="boil">
+            <p>test boil</p>
+        </div>
+    </div>
+
+    <h4 style="padding-left: 30px;">Empâtage</h4>
+    <ul class="timeline">
+        <li>
+            <div class="timeline-badge success"><i class="fa fa-flask"> </i></div>
+            <div class="timeline-panel">
+                <div class="timeline-body">Activer la levure</div>
+            </div>
+        </li>
+        <li>
+            <div class="timeline-badge primary"><i class="fa fa-gavel"> </i></div>
+            <div class="timeline-panel">
+                <div class="timeline-body">Concasser le malt</div>
+            </div>
+        </li>
+        <li>
+            <div class="timeline-badge danger"><i class="fa fa-fire"> </i></div>
+            <div class="timeline-panel">
+                <div class="timeline-body">Faire chauffer 18 L d&rsquo;eau</div>
+            </div>
+        </li>
+        <li>
+            <div class="timeline-badge success"><i class="fa fa-spoon"> </i></div>
+            <div class="timeline-panel">
+                <div class="timeline-body"><strong>Mono-palier</strong> à 68°C pendant 60 minutes</div>
+            </div>
+        </li>
+        <li>
+            <div class="timeline-badge success"><i class="fa fa-spoon"> </i></div>
+            <div class="timeline-panel">
+                <div class="timeline-body">Palier de <strong>désactivation des enzymes</strong> (mash-out) à 78°C pendant 10 minutes</div>
+            </div>
+        </li>
+        <li>
+            <div class="timeline-badge info"><i class="fa fa-tint"> </i></div>
+            <div class="timeline-panel">
+                <div class="timeline-body">Filtrer et laver les drêches avec <strong>18 L d&rsquo;eau à 80°C.</strong> <em>Adapter le volume d&rsquo;eau en fonction de la quantité de moût obtenue</em></div>
+            </div>
+    </ul>
 
         <div class="col-lg-10 col-lg-offset-1">
             <table class="table table-borderless table-condensed table-hover">

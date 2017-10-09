@@ -15,7 +15,7 @@ include_once("includes/analyticstracking.php");
 
 ?>
 
-<div class="container">
+<div class="container font_white">
     <div class="col-lg-8 col-lg-offset-2">
         <h1 class="titrePage text-center">Le brassage</h1>
         <p class="text-justify">La conception et la fabrication d'une bière reflètent l'humeur de celui qui la fait. Selon le feeling qui préside au brassage, le résultat peut être technique, appliqué, original, expérimental ou vraiment personnel. Créer sa propre bière est extrèmement satisfaisant. Pour le brassage à la maison, j'utilise la méthode "tout grain".</p>

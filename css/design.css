@@ -1,5 +1,11 @@
     body {
     padding-top: 50px;
+        background-image: url("../images/page_background.jpg");
+        background-attachment:fixed;
+}
+
+.font_white {
+    background-color: #FFFFFF;
 }
 .starter-template {
     padding: 40px 15px;
@@ -15,6 +21,10 @@
 
 p {
     font-family: 'Open Sans', sans-serif;
+}
+
+.tab {
+    width: 33.33%
 }
 
 .margeImage {
@@ -127,4 +137,8 @@ p {
     .thumbnail a.btn {
         border-top-left-radius: 0px;
         border-top-right-radius: 0px;
+    }
+
+    .tab {
+        width: 33.33%;
     }
