@@ -24,7 +24,7 @@ catch(Exception $e)
     die('Erreur : '.$e->getMessage());
 }
 
-$name = "Brassin 4 : Bière de Noël";
+$name = "Brassin 4 - Bière de Noël";
 
 $sql_info="SELECT * FROM Info WHERE Brassin='$name'";
 $sql_ingredients="SELECT * FROM ingredients WHERE Brassin='$name'";
