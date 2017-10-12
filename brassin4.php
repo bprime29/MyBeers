@@ -33,6 +33,7 @@ $sql_fermentation="SELECT * FROM fermentation WHERE Brassin='$name'";
 $sql_mash_step="SELECT * FROM mash_step WHERE Brassin='$name'";
 $sql_mash_info="SELECT * FROM mash_info WHERE Brassin='$name'";
 ?>
+<link href="css/timeline_recette.css" rel="stylesheet">
 <div class="container font_white">
 
     <div class="starter-template">
@@ -274,12 +275,6 @@ $sql_mash_info="SELECT * FROM mash_info WHERE Brassin='$name'";
     <div class="tab-content">
         <div class="tab-pane active" id="mashing">
             <ul class="timeline">
-                <li>
-                    <div class="timeline-badge success"><i class="fa fa-flask"> </i></div>
-                    <div class="timeline-panel">
-                        <div class="timeline-body">Activer la levure</div>
-                    </div>
-                </li>
                 <li>
                     <div class="timeline-badge primary"><i class="fa fa-gavel"> </i></div>
                     <div class="timeline-panel">
