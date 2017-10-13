@@ -353,7 +353,7 @@ $sql_mash_info="SELECT * FROM mash_info WHERE Brassin='$name'";
                 <li>
                     <div class="timeline-badge success"><i class="fa fa-plus"> </i></div>
                     <div class="timeline-panel">
-                        <div class="timeline-body">Ajouter les <strong>20 g de Cascade</strong> et les <strong>20 g de Saaz</strong></div>
+                        <div class="timeline-body">Ajouter les <strong>20 g de Cascade</strong></div>
                     </div>
                 </li>
                 <li>
