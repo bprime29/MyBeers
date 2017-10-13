@@ -302,12 +302,91 @@ $sql_mash_info="SELECT * FROM mash_info WHERE Brassin='$name'";
                 <li>
                     <div class="timeline-badge info"><i class="fa fa-tint"> </i></div>
                     <div class="timeline-panel">
-                        <div class="timeline-body">Filtrer et laver les drêches avec <strong>18 L d&rsquo;eau à 80°C.</strong> <em>Adapter le volume d&rsquo;eau en fonction de la quantité de moût obtenue</em></div>
+                        <div class="timeline-body">Filtrer et laver les drêches avec <strong>13 L d&rsquo;eau à 80°C.</strong> <em>Adapter le volume d&rsquo;eau en fonction de la quantité de moût obtenue</em></div>
                     </div>
             </ul>
         </div>
         <div class="tab-pane" id="boil">
-            <p>test boil</p>
+            <ul class="timeline">
+                <li>
+                    <div class="timeline-badge danger"><i class="fa fa-fire"> </i></div>
+                    <div class="timeline-panel">
+                        <div class="timeline-body">Faire bouillir le moût</div>
+                    </div>
+                </li>
+                <li>
+                    <div class="timeline-badge success"><i class="fa fa-plus"> </i></div>
+                    <div class="timeline-panel">
+                        <div class="timeline-body">Ajouter les <strong>25 g de Northern Brewer</strong></div>
+                    </div>
+                </li>
+                <li>
+                    <div class="timeline-badge info"><i class="fa fa-hourglass-start"> </i></div>
+                    <div class="timeline-panel">
+                        <div class="timeline-body"><i>Minuteur 30 minutes</i></div>
+                    </div>
+                </li>
+                <li>
+                    <div class="timeline-badge success"><i class="fa fa-plus"> </i></div>
+                    <div class="timeline-panel">
+                        <div class="timeline-body">Ajouter les <strong>100 g de sucre Candi</strong></div>
+                    </div>
+                </li>
+                <li>
+                    <div class="timeline-badge info"><i class="fa fa-hourglass-start"> </i></div>
+                    <div class="timeline-panel">
+                        <div class="timeline-body"><i>Minuteur 30 minutes</i></div>
+                    </div>
+                </li>
+                <li>
+                    <div class="timeline-badge success"><i class="fa fa-plus"> </i></div>
+                    <div class="timeline-panel">
+                        <div class="timeline-body">Ajouter les <strong>10 g de Styrian Golding</strong></div>
+                    </div>
+                </li>
+                <li>
+                    <div class="timeline-badge info"><i class="fa fa-hourglass-start"> </i></div>
+                    <div class="timeline-panel">
+                        <div class="timeline-body"><i>Minuteur 15 minutes</i></div>
+                    </div>
+                </li>
+                <li>
+                    <div class="timeline-badge success"><i class="fa fa-plus"> </i></div>
+                    <div class="timeline-panel">
+                        <div class="timeline-body">Ajouter les <strong>20 g de Cascade</strong> et les <strong>20 g de Saaz</strong></div>
+                    </div>
+                </li>
+                <li>
+                    <div class="timeline-badge info"><i class="fa fa-hourglass-start"> </i></div>
+                    <div class="timeline-panel">
+                        <div class="timeline-body"><i>Minuteur 10 minutes</i></div>
+                    </div>
+                </li>
+                <li>
+                    <div class="timeline-badge success"><i class="fa fa-plus"> </i></div>
+                    <div class="timeline-panel">
+                        <div class="timeline-body">Ajouter toutes les <strong>épices</strong></div>
+                    </div>
+                </li>
+                <li>
+                    <div class="timeline-badge info"><i class="fa fa-hourglass-start"> </i></div>
+                    <div class="timeline-panel">
+                        <div class="timeline-body"><i>Minuteur 5 minutes</i></div>
+                    </div>
+                </li>
+                <li>
+                    <div class="timeline-badge success"><i class="fa fa-remove"> </i></div>
+                    <div class="timeline-panel">
+                        <div class="timeline-body">Retirer tout le houblon et les épices</div>
+                    </div>
+                </li>
+                <li>
+                    <div class="timeline-badge danger"><i class="fa fa-fire-extinguisher"> </i></div>
+                    <div class="timeline-panel">
+                        <div class="timeline-body">Faire refroidir le moût</div>
+                    </div>
+                </li>
+            </ul>
         </div>
     </div>
 </div>
