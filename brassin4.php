@@ -375,7 +375,7 @@ $sql_mash_info="SELECT * FROM mash_info WHERE Brassin='$name'";
                     </div>
                 </li>
             </ul>
-            <div class="tab-pane active" id="mashing">
+            <div class="tab-pane active" id="fermentation">
                 <?php
                 $fermentation=$bdd->query($sql_fermentation);
                 $datafermentation=$fermentation->fetch();
