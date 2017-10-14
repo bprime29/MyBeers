@@ -242,23 +242,25 @@ $sql_mash_info="SELECT * FROM mash_info WHERE Brassin='$name'";
             </tbody>
         </table>
     </div-->
-    <ul class="nav nav-tabs tabs tabs-top" style="width: 100%">
-        <li class="tab active">
-            <a href="#mashing" data-toggle="tab" target="_blank">
-                Empâtage
-            </a>
-        </li>
-        <li class="tab">
-            <a href="#boil" data-toggle="tab" target="_blank">
-                Ebullition
-            </a>
-        </li>
-        <li class="tab">
-            <a href="#ferment" data-toggle="tab" target="_blank">
-                Fermentation
-            </a>
-        </li>
-    </ul>
+    <div class="col-lg-10 col-lg-offset-1">
+        <ul class="nav nav-tabs tabs tabs-top" style="width: 100%">
+            <li class="tab active">
+                <a href="#mashing" data-toggle="tab" target="_blank">
+                    Empâtage
+                </a>
+            </li>
+            <li class="tab">
+                <a href="#boil" data-toggle="tab" target="_blank">
+                    Ebullition
+                </a>
+            </li>
+            <li class="tab">
+                <a href="#ferment" data-toggle="tab" target="_blank">
+                    Fermentation
+                </a>
+            </li>
+        </ul>
+    </div>
 
     <div class="tab-content">
         <div class="tab-pane active" id="mashing">
