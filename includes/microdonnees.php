@@ -27,6 +27,13 @@
 		}
 	}, {
 		"@type": "ListItem",
+		"position": 2,
+		"item": {
+			"@id": "https://tybrasseur.fr/brassage.php",
+			"name": "Apprentissage du brassage amateur"
+		}
+	}, {
+		"@type": "ListItem",
 		"position": 3,
 		"item": {
 			"@id": "https://tybrasseur.fr/brassin1.php",
@@ -45,6 +52,13 @@
 		"item": {
 			"@id": "https://tybrasseur.fr/brassin3.php",
 			"name": "Brassin 3 : Bière douce rubis profond"
+		}
+	}, {
+		"@type": "ListItem",
+		"position": 3,
+		"item": {
+			"@id": "https://tybrasseur.fr/brassin4.php",
+			"name": "Brassin 3 : Bière de Noël"
 		}
 	}]
 }
