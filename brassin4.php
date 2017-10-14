@@ -221,7 +221,19 @@ $sql_mash_info="SELECT * FROM mash_info WHERE Brassin='$name'";
                 <h4>Fermentation </h4>
             </caption>
             <tbody>
-
+            <?php
+            $fermentation=$bdd->query($sql_fermentation);
+            $datafermentation=$fermentation->fetch();
+            ?>
+            <tr>
+                <td colspan="2"><em><strong>Primaire :</strong></em> <?php echo $datafermentation['Primaire']; ?></td>
+            </tr>
+            <tr>
+                <td colspan="2"><strong><em>Secondaire</em></strong> <em><strong>:</strong></em> <?php echo $datafermentation['Secondaire']; ?></td>
+            </tr>
+            <tr>
+                <td colspan="2"><em><strong>Sucre à l'embouteillage :</strong></em> <?php echo $datafermentation['Sucre']; ?></td>
+            </tr>
             </tbody>
         </table>
     </div-->
@@ -377,19 +389,86 @@ $sql_mash_info="SELECT * FROM mash_info WHERE Brassin='$name'";
             </ul>
         </div>
         <div class="tab-pane" id="fermentation">
-            <?php
-            $fermentation=$bdd->query($sql_fermentation);
-            $datafermentation=$fermentation->fetch();
-            ?>
-            <tr>
-                <td colspan="2"><em><strong>Primaire :</strong></em> <?php echo $datafermentation['Primaire']; ?></td>
-            </tr>
-            <tr>
-                <td colspan="2"><strong><em>Secondaire</em></strong> <em><strong>:</strong></em> <?php echo $datafermentation['Secondaire']; ?></td>
-            </tr>
-            <tr>
-                <td colspan="2"><em><strong>Sucre à l'embouteillage :</strong></em> <?php echo $datafermentation['Sucre']; ?></td>
-            </tr>
+            <ul class="timeline">
+                <li>
+                    <div class="timeline-badge danger"><i class="fa fa-fire"> </i></div>
+                    <div class="timeline-panel">
+                        <div class="timeline-body">Faire bouillir le moût</div>
+                    </div>
+                </li>
+                <li>
+                    <div class="timeline-badge success"><i class="fa fa-plus"> </i></div>
+                    <div class="timeline-panel">
+                        <div class="timeline-body">Ajouter les <strong>25 g de Northern Brewer</strong></div>
+                    </div>
+                </li>
+                <li>
+                    <div class="timeline-badge info"><i class="fa fa-hourglass-start"> </i></div>
+                    <div class="timeline-panel">
+                        <div class="timeline-body"><i>Minuteur 30 minutes</i></div>
+                    </div>
+                </li>
+                <li>
+                    <div class="timeline-badge success"><i class="fa fa-plus"> </i></div>
+                    <div class="timeline-panel">
+                        <div class="timeline-body">Ajouter les <strong>100 g de sucre Candi</strong></div>
+                    </div>
+                </li>
+                <li>
+                    <div class="timeline-badge info"><i class="fa fa-hourglass-start"> </i></div>
+                    <div class="timeline-panel">
+                        <div class="timeline-body"><i>Minuteur 30 minutes</i></div>
+                    </div>
+                </li>
+                <li>
+                    <div class="timeline-badge success"><i class="fa fa-plus"> </i></div>
+                    <div class="timeline-panel">
+                        <div class="timeline-body">Ajouter les <strong>10 g de Styrian Golding</strong></div>
+                    </div>
+                </li>
+                <li>
+                    <div class="timeline-badge info"><i class="fa fa-hourglass-start"> </i></div>
+                    <div class="timeline-panel">
+                        <div class="timeline-body"><i>Minuteur 15 minutes</i></div>
+                    </div>
+                </li>
+                <li>
+                    <div class="timeline-badge success"><i class="fa fa-plus"> </i></div>
+                    <div class="timeline-panel">
+                        <div class="timeline-body">Ajouter les <strong>20 g de Cascade</strong></div>
+                    </div>
+                </li>
+                <li>
+                    <div class="timeline-badge info"><i class="fa fa-hourglass-start"> </i></div>
+                    <div class="timeline-panel">
+                        <div class="timeline-body"><i>Minuteur 10 minutes</i></div>
+                    </div>
+                </li>
+                <li>
+                    <div class="timeline-badge success"><i class="fa fa-plus"> </i></div>
+                    <div class="timeline-panel">
+                        <div class="timeline-body">Ajouter toutes les <strong>épices</strong></div>
+                    </div>
+                </li>
+                <li>
+                    <div class="timeline-badge info"><i class="fa fa-hourglass-start"> </i></div>
+                    <div class="timeline-panel">
+                        <div class="timeline-body"><i>Minuteur 5 minutes</i></div>
+                    </div>
+                </li>
+                <li>
+                    <div class="timeline-badge success"><i class="fa fa-remove"> </i></div>
+                    <div class="timeline-panel">
+                        <div class="timeline-body">Retirer tout le houblon et les épices</div>
+                    </div>
+                </li>
+                <li>
+                    <div class="timeline-badge danger"><i class="fa fa-fire-extinguisher"> </i></div>
+                    <div class="timeline-panel">
+                        <div class="timeline-body">Faire refroidir le moût</div>
+                    </div>
+                </li>
+            </ul>
         </div>
     </div>
 </div>
