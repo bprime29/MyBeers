@@ -375,21 +375,21 @@ $sql_mash_info="SELECT * FROM mash_info WHERE Brassin='$name'";
                     </div>
                 </li>
             </ul>
-            <div class="tab-pane active" id="fermentation">
-                <?php
-                $fermentation=$bdd->query($sql_fermentation);
-                $datafermentation=$fermentation->fetch();
-                ?>
-                <tr>
-                    <td colspan="2"><em><strong>Primaire :</strong></em> <?php echo $datafermentation['Primaire']; ?></td>
-                </tr>
-                <tr>
-                    <td colspan="2"><strong><em>Secondaire</em></strong> <em><strong>:</strong></em> <?php echo $datafermentation['Secondaire']; ?></td>
-                </tr>
-                <tr>
-                    <td colspan="2"><em><strong>Sucre à l'embouteillage :</strong></em> <?php echo $datafermentation['Sucre']; ?></td>
-                </tr>
-            </div>
+        </div>
+        <div class="tab-pane" id="fermentation">
+            <?php
+            $fermentation=$bdd->query($sql_fermentation);
+            $datafermentation=$fermentation->fetch();
+            ?>
+            <tr>
+                <td colspan="2"><em><strong>Primaire :</strong></em> <?php echo $datafermentation['Primaire']; ?></td>
+            </tr>
+            <tr>
+                <td colspan="2"><strong><em>Secondaire</em></strong> <em><strong>:</strong></em> <?php echo $datafermentation['Secondaire']; ?></td>
+            </tr>
+            <tr>
+                <td colspan="2"><em><strong>Sucre à l'embouteillage :</strong></em> <?php echo $datafermentation['Sucre']; ?></td>
+            </tr>
         </div>
     </div>
 </div>
