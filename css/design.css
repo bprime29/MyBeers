@@ -142,3 +142,32 @@ p {
     .tab {
         width: 33.33%;
     }
+
+    body{
+        background-color: #152836
+    }
+
+.zoom {
+    width: 100%;
+    height: 100%;
+}
+.image {
+    width: 110%;
+    height: 110%;
+}
+.image img {
+    /* La transition s'applique à la fois sur la largeur et la hauteur, avec une durée d'une seconde. */
+    -webkit-transition: all 1s ease; /* Safari et Chrome */
+    -moz-transition: all 1s ease; /* Firefox */
+    -ms-transition: all 1s ease; /* Internet Explorer 9 */
+    -o-transition: all 1s ease; /* Opera */
+    transition: all 1s ease;
+}
+.image:hover img {
+    /* L'image est grossie de 25% */
+    -webkit-transform:scale(1.10); /* Safari et Chrome */
+    -moz-transform:scale(1.10); /* Firefox */
+    -ms-transform:scale(1.10); /* Internet Explorer 9 */
+    -o-transform:scale(1.10); /* Opera */
+    transform:scale(1.10);
+}

@@ -34,6 +34,11 @@ $sql_mash_step="SELECT * FROM mash_step WHERE Brassin='$name'";
 $sql_mash_info="SELECT * FROM mash_info WHERE Brassin='$name'";
 ?>
 <link href="css/timeline_recette.css" rel="stylesheet">
+<link type="text/css" rel="stylesheet" href="css/lightgallery.css" />
+<script src="js/lightgallery.min.js"></script>
+<!-- lightgallery plugins -->
+<script src="js/lg-thumbnail.min.js"></script>
+<script src="js/lg-fullscreen.min.js"></script>
 <div class="container font_white">
 
     <div class="starter-template">
@@ -41,6 +46,47 @@ $sql_mash_info="SELECT * FROM mash_info WHERE Brassin='$name'";
         <p class="lead">Voici la recette de ma première bière de Noël!</p>
         <!--p align="center">Quelques photos sont disponible <a href="https://goo.gl/photos/6BA9mZiJzFsnFB9v8">ici</a></p-->
     </div>
+    <section class="row">
+        <style type="text/css">
+            [class*="col-"] { margin-bottom: 20px; }
+            img { width: 100%; }
+        </style>
+        <div class="col-lg-10 col-lg-offset-1">
+            <div id="aniimated-thumbnials" class="zoom">
+                <a class="col-xs-4 col-sm-3 col-md-2 image" href="images/brassin4/1.jpg">
+                    <img class="img-responsive" src="images/brassin4/thumb-1.jpg">
+                </a>
+                <a class="col-xs-4 col-sm-3 col-md-2 image" href="images/brassin4/2.jpg">
+                    <img class="img-responsive" src="images/brassin4/thumb-2.jpg">
+                    <!--div class="demo-gallery-poster">
+                        <!--img src="../static/img/zoom.png">
+                    </div-->
+                </a>
+
+                <a class="col-xs-4 col-sm-3 col-md-2 image" href="images/brassin4/6.jpg">
+                    <img class="img-responsive" src="images/brassin4/thumb-6.jpg">
+                </a>
+
+                <a class="col-xs-4 col-sm-3 col-md-2 image" href="images/brassin4/7.jpg">
+                    <img class="img-responsive" src="images/brassin4/thumb-7.jpg">
+                </a>
+
+                <a class="col-xs-4 col-sm-3 col-md-2 image" href="images/brassin4/9.jpg">
+                    <img class="img-responsive" src="images/brassin4/thumb-9.jpg">
+                </a>
+
+                <a class="col-xs-4 col-sm-3 col-md-2 image" href="images/brassin4/11.jpg">
+                    <img class="img-responsive" src="images/brassin4/thumb-11.jpg">
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <script type="text/javascript">
+        $('#aniimated-thumbnials').lightGallery({
+            thumbnail:true
+        });
+    </script>
 
     <div class="col-lg-10 col-lg-offset-1">
         <table class="table table-borderless table-condensed table-hover">
