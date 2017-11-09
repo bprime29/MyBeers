@@ -286,7 +286,7 @@ $sql_mash_info="SELECT * FROM mash_info WHERE Brassin='$name'";
                     <li>
                         <div class="timeline-badge success"><i class="fa fa-spoon"> </i></div>
                         <div class="timeline-panel">
-                            <div class="timeline-body"><strong>Mono-palier</strong> à 68°C pendant 60 minutes</div>
+                            <div class="timeline-body"><strong>Mono-palier</strong> à 68°C pendant 90 minutes</div>
                         </div>
                     </li>
                     <li>
@@ -298,7 +298,7 @@ $sql_mash_info="SELECT * FROM mash_info WHERE Brassin='$name'";
                     <li>
                         <div class="timeline-badge info"><i class="fa fa-tint"> </i></div>
                         <div class="timeline-panel">
-                            <div class="timeline-body">Filtrer et laver les drêches avec <strong>13 L d&rsquo;eau à 80°C.</strong> <em>Adapter le volume d&rsquo;eau en fonction de la quantité de moût obtenue</em></div>
+                            <div class="timeline-body">Filtrer et laver les drêches avec <strong>13 L d&rsquo;eau à 78°C.</strong> <em>Adapter le volume d&rsquo;eau en fonction de la quantité de moût obtenue</em></div>
                         </div>
                 </ul>
             </div>
@@ -315,43 +315,19 @@ $sql_mash_info="SELECT * FROM mash_info WHERE Brassin='$name'";
                     <li>
                         <div class="timeline-badge success"><i class="fa fa-plus"> </i></div>
                         <div class="timeline-panel">
-                            <div class="timeline-body">Ajouter les <strong>25 g de Northern Brewer</strong></div>
+                            <div class="timeline-body">Ajouter les <strong>30 g de Cascade</strong></div>
                         </div>
                     </li>
                     <li>
                         <div class="timeline-badge info"><i class="fa fa-hourglass-start"> </i></div>
                         <div class="timeline-panel">
-                            <div class="timeline-body"><i>Minuteur 30 minutes</i></div>
+                            <div class="timeline-body"><i>Minuteur 70 minutes</i></div>
                         </div>
                     </li>
                     <li>
                         <div class="timeline-badge success"><i class="fa fa-plus"> </i></div>
                         <div class="timeline-panel">
-                            <div class="timeline-body">Ajouter les <strong>100 g de sucre Candi</strong></div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="timeline-badge info"><i class="fa fa-hourglass-start"> </i></div>
-                        <div class="timeline-panel">
-                            <div class="timeline-body"><i>Minuteur 30 minutes</i></div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="timeline-badge success"><i class="fa fa-plus"> </i></div>
-                        <div class="timeline-panel">
-                            <div class="timeline-body">Ajouter les <strong>10 g de Styrian Golding</strong></div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="timeline-badge info"><i class="fa fa-hourglass-start"> </i></div>
-                        <div class="timeline-panel">
-                            <div class="timeline-body"><i>Minuteur 15 minutes</i></div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="timeline-badge success"><i class="fa fa-plus"> </i></div>
-                        <div class="timeline-panel">
-                            <div class="timeline-body">Ajouter les <strong>20 g de Cascade</strong></div>
+                            <div class="timeline-body">Ajouter les <strong>15 g de Cascade</strong></div>
                         </div>
                     </li>
                     <li>
@@ -363,7 +339,19 @@ $sql_mash_info="SELECT * FROM mash_info WHERE Brassin='$name'";
                     <li>
                         <div class="timeline-badge success"><i class="fa fa-plus"> </i></div>
                         <div class="timeline-panel">
-                            <div class="timeline-body">Ajouter toutes les <strong>épices</strong></div>
+                            <div class="timeline-body">Ajouter les <strong>15 g de Cascade</strong></div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="timeline-badge info"><i class="fa fa-hourglass-start"> </i></div>
+                        <div class="timeline-panel">
+                            <div class="timeline-body"><i>Minuteur 5 minutes</i></div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="timeline-badge success"><i class="fa fa-plus"> </i></div>
+                        <div class="timeline-panel">
+                            <div class="timeline-body">Ajouter les <strong>15 g de Cascade</strong></div>
                         </div>
                     </li>
                     <li>
@@ -375,7 +363,7 @@ $sql_mash_info="SELECT * FROM mash_info WHERE Brassin='$name'";
                     <li>
                         <div class="timeline-badge success"><i class="fa fa-remove"> </i></div>
                         <div class="timeline-panel">
-                            <div class="timeline-body">Retirer tout le houblon et les épices</div>
+                            <div class="timeline-body">Retirer tout le houblon</div>
                         </div>
                     </li>
                     <li>
