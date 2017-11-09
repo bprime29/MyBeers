@@ -6,8 +6,8 @@ session_start();
  * Date: 6/14/17
  * Time: 4:31 PM
  */
-$titre = "Bière de Noël";
-$description = "Recette de ma première bière de Noël";
+$titre = "Bière blonde au cascade";
+$description = "Recette de bière blonde avec comme seul houblon du cascade";
 include("includes/config.php");
 include("includes/identifiants.php");
 include("includes/debut.php");
@@ -24,7 +24,7 @@ catch(Exception $e)
     die('Erreur : '.$e->getMessage());
 }
 
-$name = "Brassin 4 - Bière de Noël";
+$name = "Brassin 5 : Bière blonde cascade";
 
 $sql_info="SELECT * FROM Info WHERE Brassin='$name'";
 $sql_ingredients="SELECT * FROM ingredients WHERE Brassin='$name'";
@@ -43,50 +43,9 @@ $sql_mash_info="SELECT * FROM mash_info WHERE Brassin='$name'";
 
     <div class="starter-template">
         <h1><?php echo $name; ?></h1>
-        <p class="lead">Voici la recette de ma première bière de Noël!</p>
+        <p class="lead">Voulant tester le houblon cascade (car je pense en faire pousser l'année prochaine dans le jardin), je me suis lancé dans un recette de bière blonde avec comme houblon, uniquement du cascade.</p>
         <!--p align="center">Quelques photos sont disponible <a href="https://goo.gl/photos/6BA9mZiJzFsnFB9v8">ici</a></p-->
     </div>
-    <section class="row">
-        <style type="text/css">
-            [class*="col-"] { margin-bottom: 20px; }
-            img { width: 100%; }
-        </style>
-        <div class="col-lg-10 col-lg-offset-1">
-            <div id="aniimated-thumbnials" class="zoom">
-                <a class="col-xs-4 col-sm-3 col-md-2 image" href="images/brassin4/1.jpg">
-                    <img class="img-responsive" src="images/brassin4/thumb-1.jpg">
-                </a>
-                <a class="col-xs-4 col-sm-3 col-md-2 image" href="images/brassin4/2.jpg">
-                    <img class="img-responsive" src="images/brassin4/thumb-2.jpg">
-                    <!--div class="demo-gallery-poster">
-                        <!--img src="../static/img/zoom.png">
-                    </div-->
-                </a>
-
-                <a class="col-xs-4 col-sm-3 col-md-2 image" href="images/brassin4/6.jpg">
-                    <img class="img-responsive" src="images/brassin4/thumb-6.jpg">
-                </a>
-
-                <a class="col-xs-4 col-sm-3 col-md-2 image" href="images/brassin4/7.jpg">
-                    <img class="img-responsive" src="images/brassin4/thumb-7.jpg">
-                </a>
-
-                <a class="col-xs-4 col-sm-3 col-md-2 image" href="images/brassin4/9.jpg">
-                    <img class="img-responsive" src="images/brassin4/thumb-9.jpg">
-                </a>
-
-                <a class="col-xs-4 col-sm-3 col-md-2 image" href="images/brassin4/11.jpg">
-                    <img class="img-responsive" src="images/brassin4/thumb-11.jpg">
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <script type="text/javascript">
-        $('#aniimated-thumbnials').lightGallery({
-            thumbnail:true
-        });
-    </script>
 
     <div class="col-lg-10 col-lg-offset-1">
         <table class="table table-borderless table-condensed table-hover">
