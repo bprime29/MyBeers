@@ -58,7 +58,14 @@
 		"position": 3,
 		"item": {
 			"@id": "https://tybrasseur.fr/brassin4.php",
-			"name": "Brassin 3 : Bière de Noël"
+			"name": "Brassin 4 : Bière de Noël"
+		}
+	}, {
+		"@type": "ListItem",
+		"position": 3,
+		"item": {
+			"@id": "https://tybrasseur.fr/brassin5.php",
+			"name": "Brassin 5 : Bière blonde cascade"
 		}
 	}]
 }
