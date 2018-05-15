@@ -36,8 +36,8 @@ $sql_mash_info="SELECT * FROM mash_info WHERE Brassin='$name'";
 <div class="container font_white">
 
     <div class="starter-template">
-        <h1><?php echo $name; ?></h1>
-        <p class="lead">Voici la recette d'une IPA citra.</p>
+        <h1>Brassin 7 - IPA Amarillo/Citra</h1>
+        <p class="lead">Voici la recette d'une IPA Amarillo/Citra.</p>
         <!--p align="center">Quelques photos sont disponible <a href="https://goo.gl/photos/6BA9mZiJzFsnFB9v8">ici</a></p-->
     </div>
 
@@ -274,19 +274,25 @@ $sql_mash_info="SELECT * FROM mash_info WHERE Brassin='$name'";
                     <li>
                         <div class="timeline-badge danger"><i class="fa fa-fire"> </i></div>
                         <div class="timeline-panel">
-                            <div class="timeline-body">Faire chauffer 11.5 L d'eau à 70C</div>
+                            <div class="timeline-body">Faire chauffer 11.5 L d'eau à 72C</div>
                         </div>
                     </li>
                     <li>
                         <div class="timeline-badge success"><i class="fa fa-spoon"> </i></div>
                         <div class="timeline-panel">
-                            <div class="timeline-body"><strong>Mono-palier</strong> à 65°C pendant 75 minutes</div>
+                            <div class="timeline-body"><strong>Mono-palier</strong> à 68°C pendant 60 minutes</div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="timeline-badge danger"><i class="fa fa-fire"> </i></div>
+                        <div class="timeline-panel">
+                            <div class="timeline-body">Faire chauffer à 78C et laisser 10min</div>
                         </div>
                     </li>
                     <li>
                         <div class="timeline-badge info"><i class="fa fa-tint"> </i></div>
                         <div class="timeline-panel">
-                            <div class="timeline-body">Filtrer et laver les drêches avec <strong>19 L d&rsquo;eau à 75°C.</strong></div>
+                            <div class="timeline-body">Filtrer et laver les drêches avec <strong>19 L d&rsquo;eau à 78°C.</strong></div>
                         </div>
                 </ul>
             </div>
@@ -303,25 +309,25 @@ $sql_mash_info="SELECT * FROM mash_info WHERE Brassin='$name'";
                     <li>
                         <div class="timeline-badge success"><i class="fa fa-plus"> </i></div>
                         <div class="timeline-panel">
-                            <div class="timeline-body">Ajouter les <strong>20 g de East Kent Goldings</strong></div>
+                            <div class="timeline-body">Ajouter les <strong>35 g d'Amarillo</strong></div>
                         </div>
                     </li>
                     <li>
                         <div class="timeline-badge info"><i class="fa fa-hourglass-start"> </i></div>
                         <div class="timeline-panel">
-                            <div class="timeline-body"><i>Minuteur 55 minutes</i></div>
+                            <div class="timeline-body"><i>Minuteur 50 minutes</i></div>
                         </div>
                     </li>
                     <li>
                         <div class="timeline-badge success"><i class="fa fa-plus"> </i></div>
                         <div class="timeline-panel">
-                            <div class="timeline-body">Ajouter les <strong> 30 g de East Kent Goldings, 20 g de Graines de coriandres moulues, 20 g de Écorces d’orange douce</strong></div>
+                            <div class="timeline-body">Ajouter les <strong> 50 g de Citra</strong></div>
                         </div>
                     </li>
                     <li>
                         <div class="timeline-badge info"><i class="fa fa-hourglass-start"> </i></div>
                         <div class="timeline-panel">
-                            <div class="timeline-body"><i>Minuteur 5 minutes</i></div>
+                            <div class="timeline-body"><i>Minuteur 10 minutes</i></div>
                         </div>
                     </li>
                     <li>
@@ -351,6 +357,9 @@ $sql_mash_info="SELECT * FROM mash_info WHERE Brassin='$name'";
                     </tr>
                     <tr>
                         <td colspan="2"><strong><em>Secondaire</em></strong> <em><strong>:</strong></em> <?php echo $datafermentation['Secondaire']; ?></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"<strong><em>Dry hopping</em></strong> <em><strong>:</strong></em>>Ajouter <strong>50g de Citra</strong> 5 jours avant la mise en bouteille</td>
                     </tr>
                     <tr>
                         <td colspan="2"><em><strong>Sucre à l'embouteillage :</strong></em> <?php echo $datafermentation['Sucre']; ?></td>

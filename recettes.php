@@ -27,6 +27,7 @@ include_once("includes/analyticstracking.php");
         <li><a href="brassin4.php">Brassin 4 : Bière de Noël</a></li>
         <li><a href="brassin5.php">Brassin 5 : Bière blonde cascade</a></li>
         <li><a href="brassin6.php">Brassin 6 : Bière blanche</a></li>
+        <li><a href="brassin7.php">Brassin 7 : IPA Amarillo/Citra</a></li>
 
     </div>
     <!--div class="row">
