@@ -274,7 +274,7 @@ $sql_mash_info="SELECT * FROM mash_info WHERE Brassin='$name'";
                     <li>
                         <div class="timeline-badge danger"><i class="fa fa-fire"> </i></div>
                         <div class="timeline-panel">
-                            <div class="timeline-body">Faire chauffer 11.5 L d'eau à 72C</div>
+                            <div class="timeline-body">Faire chauffer 18 L d'eau à 72C</div>
                         </div>
                     </li>
                     <li>
@@ -292,7 +292,7 @@ $sql_mash_info="SELECT * FROM mash_info WHERE Brassin='$name'";
                     <li>
                         <div class="timeline-badge info"><i class="fa fa-tint"> </i></div>
                         <div class="timeline-panel">
-                            <div class="timeline-body">Filtrer et laver les drêches avec <strong>19 L d&rsquo;eau à 78°C.</strong></div>
+                            <div class="timeline-body">Filtrer et laver les drêches avec <strong>13 L d&rsquo;eau à 78°C.</strong></div>
                         </div>
                 </ul>
             </div>
