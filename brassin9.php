@@ -105,35 +105,6 @@ $sql_mash_info="SELECT * FROM mash_info WHERE Brassin='$name'";
         </table>
     </div>
 
-    <div class="col-lg-10 col-lg-offset-1">
-        <table class="table table-hover table-striped table-condensed">
-            <thead>
-            <tr>
-                <th>Step time</th>
-                <th>Name</th>
-                <th>Description</th>
-                <th>Step temp</th>
-            </tr>
-            </thead>
-            <tbody>
-            <?php
-            $mash_step=$bdd->query($sql_mash_step);
-            while($dataMashStep = $mash_step->fetch())
-            {
-                ?>
-                <tr>
-                    <td><?php echo $dataMashStep['Step_time']; ?></td>
-                    <td><?php echo $dataMashStep['Name']; ?></td>
-                    <td><?php echo $dataMashStep['Description']; ?></td>
-                    <td><?php echo $dataMashStep['Step_temp']; ?></td>
-                </tr>
-                <?php
-            }
-
-            ?>
-            </tbody>
-        </table>
-    </div>
 
     <div class="col-lg-10 col-lg-offset-1">
         <table class="table table-hover table-striped table-condensed">
