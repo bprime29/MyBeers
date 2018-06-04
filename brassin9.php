@@ -162,62 +162,7 @@ $sql_mash_info="SELECT * FROM mash_info WHERE Brassin='$name'";
             </tr>
         </table>
     </div>
-    <div class="col-lg-10 col-lg-offset-1">
-        <table class="table table-hover table-striped table-condensed">
-            <thead>
-            <tr>
-                <th>Step time</th>
-                <th>Name</th>
-                <th>Description</th>
-                <th>Step temp</th>
-            </tr>
-            </thead>
-            <tbody>
-            <?php
-            $mash_step=$bdd->query($sql_mash_step);
-            while($dataMashStep = $mash_step->fetch())
-            {
-                ?>
-                <tr>
-                    <td><?php echo $dataMashStep['Step_time']; ?></td>
-                    <td><?php echo $dataMashStep['Name']; ?></td>
-                    <td><?php echo $dataMashStep['Description']; ?></td>
-                    <td><?php echo $dataMashStep['Step_temp']; ?></td>
-                </tr>
-                <?php
-            }
 
-            ?>
-            </tbody>
-        </table>
-    </div>
-    <!--div-- class="col-lg-10 col-lg-offset-1">
-        <table class="table table-borderless table-condensed table-hover">
-            <caption>
-                <h4>Fermentation </h4>
-            </caption>
-            <tbody>
-
-            </tbody>
-        </table>
-    </div-->
-
-    <!--div class="col-lg-10 col-lg-offset-1">
-        <table class="table table-hover table-striped table-condensed">
-            <caption>
-                <h4>Commentaires : </h4>
-            </caption>
-            <tbody>
-            <?php
-            $fermentation=$bdd->query($sql_fermentation);
-            $datafermentation=$fermentation->fetch();
-            ?>
-            <tr>
-                <td colspan="2"><em><strong>Primaire :</strong></em> <?php echo $datafermentation['Primaire']; ?></td>
-            </tr>
-            </tbody>
-        </table>
-    </div-->
     <div class="col-lg-10 col-lg-offset-1">
         <ul class="nav nav-tabs tabs tabs-top" style="width: 100%">
             <li class="tab active">
