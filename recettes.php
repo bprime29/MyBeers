@@ -30,6 +30,6 @@ include_once("includes/analyticstracking.php");
         <li><a href="brassin7.php">Brassin 7 : IPA Amarillo/Citra</a></li>
         <li><a href="brassin8.php">Brassin 8 : Pilsner v1</a></li>
         <li><a href="brassin9.php">Brassin 9 : Bière blanche v2 et blanche framboise</a></li>
-        <li><a href="brassin9.php">Brassin 10 : Black IPA Amarillo/Cascade</a></li>
+        <li><a href="brassin10.php">Brassin 10 : Black IPA Amarillo/Cascade</a></li>
     </div>
 </div><!-- /.container -->
