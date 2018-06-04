@@ -1,7 +1,13 @@
 <?php
 session_start();
-$titre = "Pilsner v1";
-$description = "Recette de ma prmière pilsner";
+/**
+ * Created by PhpStorm.
+ * User: bprime
+ * Date: 6/14/17
+ * Time: 4:31 PM
+ */
+$titre = "Bière blanche v2 et blanche framboise";
+$description = "Recette de ma deuxième blanche et d'une blanche framboise";
 include("includes/config.php");
 include("includes/identifiants.php");
 include("includes/debut.php");
@@ -9,23 +15,26 @@ include_once("includes/analyticstracking.php");
 
 ?>
 <?php
-try {
+try
+{
     $bdd = new PDO('mysql:host=localhost;dbname=MyBeers;charset=utf8', 'mybeers', 'Bebzh2912!');
-} catch (Exception $e) {
-    die('Erreur : ' . $e->getMessage());
+}
+catch(Exception $e)
+{
+    die('Erreur : '.$e->getMessage());
 }
 
-$name = "Brassin 8 - Pilsner v1";
+$name = "Brassin 9 & 9F - Blanche v2 et blanche framboise";
 
-$sql_info = "SELECT * FROM Info WHERE Brassin='$name'";
-$sql_ingredients = "SELECT * FROM ingredients WHERE Brassin='$name'";
-$sql_profil = "SELECT * FROM profil WHERE Brassin='$name'";
-$sql_fermentation = "SELECT * FROM fermentation WHERE Brassin='$name'";
-$sql_mash_step = "SELECT * FROM mash_step WHERE Brassin='$name'";
-$sql_mash_info = "SELECT * FROM mash_info WHERE Brassin='$name'";
+$sql_info="SELECT * FROM Info WHERE Brassin='$name'";
+$sql_ingredients="SELECT * FROM ingredients WHERE Brassin='$name'";
+$sql_profil="SELECT * FROM profil WHERE Brassin='$name'";
+$sql_fermentation="SELECT * FROM fermentation WHERE Brassin='$name'";
+$sql_mash_step="SELECT * FROM mash_step WHERE Brassin='$name'";
+$sql_mash_info="SELECT * FROM mash_info WHERE Brassin='$name'";
 ?>
 <link href="css/timeline_recette.css" rel="stylesheet">
-<link type="text/css" rel="stylesheet" href="css/lightgallery.css"/>
+<link type="text/css" rel="stylesheet" href="css/lightgallery.css" />
 <script src="js/lightgallery.min.js"></script>
 <!-- lightgallery plugins -->
 <script src="js/lg-thumbnail.min.js"></script>
@@ -33,8 +42,8 @@ $sql_mash_info = "SELECT * FROM mash_info WHERE Brassin='$name'";
 <div class="container font_white">
 
     <div class="starter-template">
-        <h1>Brassin 8 - Pilsner v1</h1>
-        <p class="lead">Voici la recette de ma première Pilsner!</p>
+        <h1><?php echo $name; ?></h1>
+        <p class="lead">Voici la recette de ma deuxième blanche. J'ai séparé le bassin en 2 en fin d'ébulition afin de rajouter des framboises dans une partie du brassin en fermentation!</p>
         <!--p align="center">Quelques photos sont disponible <a href="https://goo.gl/photos/6BA9mZiJzFsnFB9v8">ici</a></p-->
     </div>
 
@@ -45,8 +54,8 @@ $sql_mash_info = "SELECT * FROM mash_info WHERE Brassin='$name'";
             </caption>
             <tbody>
             <?php
-            $info = $bdd->query($sql_info);
-            $dataInfo = $info->fetch();
+            $info=$bdd->query($sql_info);
+            $dataInfo=$info->fetch();
             ?>
             <tr>
                 <td>Type: <?php echo $dataInfo['Type']; ?></td>
@@ -79,8 +88,9 @@ $sql_mash_info = "SELECT * FROM mash_info WHERE Brassin='$name'";
             </thead>
             <tbody>
             <?php
-            $ingredients = $bdd->query($sql_ingredients);
-            while ($dataIngredients = $ingredients->fetch()) {
+            $ingredients=$bdd->query($sql_ingredients);
+            while($dataIngredients = $ingredients->fetch())
+            {
                 ?>
                 <tr>
                     <td><?php echo $dataIngredients['quantité']; ?></td>
@@ -107,8 +117,9 @@ $sql_mash_info = "SELECT * FROM mash_info WHERE Brassin='$name'";
             </thead>
             <tbody>
             <?php
-            $mash_step = $bdd->query($sql_mash_step);
-            while ($dataMashStep = $mash_step->fetch()) {
+            $mash_step=$bdd->query($sql_mash_step);
+            while($dataMashStep = $mash_step->fetch())
+            {
                 ?>
                 <tr>
                     <td><?php echo $dataMashStep['Step_time']; ?></td>
@@ -131,8 +142,8 @@ $sql_mash_info = "SELECT * FROM mash_info WHERE Brassin='$name'";
             </caption>
             <tbody>
             <?php
-            $profil = $bdd->query($sql_profil);
-            $dataProfil = $profil->fetch();
+            $profil=$bdd->query($sql_profil);
+            $dataProfil=$profil->fetch();
             ?>
             <tr>
                 <td>Densité initial</td>
@@ -150,12 +161,7 @@ $sql_mash_info = "SELECT * FROM mash_info WHERE Brassin='$name'";
                 <td>Est Color</td>
                 <td><?php echo $dataProfil['color']; ?></td>
                 <td>Color</td>
-                <td>
-                    <TABLE>
-                        <TD BGCOLOR="<?php echo $dataProfil['color_val']; ?>"><FONT
-                                    COLOR="<?php echo $dataProfil['color_val']; ?>"> Color </FONT></TD>
-                    </TABLE>
-                </td>
+                <td><TABLE><TD BGCOLOR="<?php echo $dataProfil['color_val']; ?>"><FONT COLOR="<?php echo $dataProfil['color_val']; ?>"> Color </FONT></TD></TABLE></td>
             </tr>
             </tbody>
         </table>
@@ -167,8 +173,8 @@ $sql_mash_info = "SELECT * FROM mash_info WHERE Brassin='$name'";
                 <h4>Mash profile</h4>
             </caption>
             <?php
-            $mash_info = $bdd->query($sql_mash_info);
-            $dataMashInfo = $mash_info->fetch();
+            $mash_info=$bdd->query($sql_mash_info);
+            $dataMashInfo=$mash_info->fetch();
             ?>
             <tr>
                 <td width="40%">
@@ -197,8 +203,9 @@ $sql_mash_info = "SELECT * FROM mash_info WHERE Brassin='$name'";
             </thead>
             <tbody>
             <?php
-            $mash_step = $bdd->query($sql_mash_step);
-            while ($dataMashStep = $mash_step->fetch()) {
+            $mash_step=$bdd->query($sql_mash_step);
+            while($dataMashStep = $mash_step->fetch())
+            {
                 ?>
                 <tr>
                     <td><?php echo $dataMashStep['Step_time']; ?></td>
@@ -231,9 +238,9 @@ $sql_mash_info = "SELECT * FROM mash_info WHERE Brassin='$name'";
             </caption>
             <tbody>
             <?php
-    $fermentation = $bdd->query($sql_fermentation);
-    $datafermentation = $fermentation->fetch();
-    ?>
+            $fermentation=$bdd->query($sql_fermentation);
+            $datafermentation=$fermentation->fetch();
+            ?>
             <tr>
                 <td colspan="2"><em><strong>Primaire :</strong></em> <?php echo $datafermentation['Primaire']; ?></td>
             </tr>
@@ -273,20 +280,19 @@ $sql_mash_info = "SELECT * FROM mash_info WHERE Brassin='$name'";
                     <li>
                         <div class="timeline-badge danger"><i class="fa fa-fire"> </i></div>
                         <div class="timeline-panel">
-                            <div class="timeline-body">Faire chauffer 18 L d'eau à 74C</div>
+                            <div class="timeline-body">Faire chauffer 11.5 L d'eau à 70C</div>
                         </div>
                     </li>
                     <li>
                         <div class="timeline-badge success"><i class="fa fa-spoon"> </i></div>
                         <div class="timeline-panel">
-                            <div class="timeline-body"><strong>Mono-palier</strong> à 68°C pendant 60 minutes</div>
+                            <div class="timeline-body"><strong>Mono-palier</strong> à 65°C pendant 75 minutes</div>
                         </div>
                     </li>
                     <li>
                         <div class="timeline-badge info"><i class="fa fa-tint"> </i></div>
                         <div class="timeline-panel">
-                            <div class="timeline-body">Filtrer et laver les drêches avec <strong>13 L d&rsquo;eau à
-                                    78°C.</strong></div>
+                            <div class="timeline-body">Filtrer et laver les drêches avec <strong>19 L d&rsquo;eau à 75°C.</strong></div>
                         </div>
                 </ul>
             </div>
@@ -303,43 +309,31 @@ $sql_mash_info = "SELECT * FROM mash_info WHERE Brassin='$name'";
                     <li>
                         <div class="timeline-badge success"><i class="fa fa-plus"> </i></div>
                         <div class="timeline-panel">
-                            <div class="timeline-body">Ajouter les <strong>23 g de Northern Brewer/strong></div>
+                            <div class="timeline-body">Ajouter les <strong>20 g de First Gold</strong></div>
                         </div>
                     </li>
                     <li>
                         <div class="timeline-badge info"><i class="fa fa-hourglass-start"> </i></div>
                         <div class="timeline-panel">
-                            <div class="timeline-body"><i>Minuteur 50 minutes</i></div>
+                            <div class="timeline-body"><i>Minuteur 55 minutes</i></div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="timeline-badge danger"><i class="fa fa-fire-extinguisher"> </i></div>
+                        <div class="timeline-panel">
+                            <div class="timeline-body">Soutirer 15l de moût dans un fermenteur</div>
                         </div>
                     </li>
                     <li>
                         <div class="timeline-badge success"><i class="fa fa-plus"> </i></div>
                         <div class="timeline-panel">
-                            <div class="timeline-body">Ajouter les <strong> 33 g de Saaz</strong></div>
+                            <div class="timeline-body">Ajouter les <strong> 20 g de First Gold, 15 g de Graines de coriandres moulues, 15 g de Écorces d’orange douce</strong></div>
                         </div>
                     </li>
                     <li>
                         <div class="timeline-badge info"><i class="fa fa-hourglass-start"> </i></div>
                         <div class="timeline-panel">
-                            <div class="timeline-body"><i>Minuteur 10 minutes</i></div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="timeline-badge danger"><i class="fa fa-fire"> </i></div>
-                        <div class="timeline-panel">
-                            <div class="timeline-body">Eteindre le feu</div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="timeline-badge success"><i class="fa fa-plus"> </i></div>
-                        <div class="timeline-panel">
-                            <div class="timeline-body">Ajouter les <strong> 30 g de Saaz</strong></div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="timeline-badge info"><i class="fa fa-hourglass-start"> </i></div>
-                        <div class="timeline-panel">
-                            <div class="timeline-body"><i>Minuteur 10 minutes</i></div>
+                            <div class="timeline-body"><i>Minuteur 5 minutes</i></div>
                         </div>
                     </li>
                     <li>
@@ -360,21 +354,21 @@ $sql_mash_info = "SELECT * FROM mash_info WHERE Brassin='$name'";
         <div class="tab-pane" id="ferment">
             <div class="col-lg-10 col-lg-offset-1">
                 <?php
-                $fermentation = $bdd->query($sql_fermentation);
-                $datafermentation = $fermentation->fetch();
+                $fermentation=$bdd->query($sql_fermentation);
+                $datafermentation=$fermentation->fetch();
                 ?>
                 <table class="table table-borderless table-condensed table-hover">
                     <tr>
-                        <td colspan="2"><em><strong>Primaire
-                                    :</strong></em> <?php echo $datafermentation['Primaire']; ?></td>
+                        <td colspan="2"><em><strong>Primaire :</strong></em> <?php echo $datafermentation['Primaire']; ?></td>
                     </tr>
                     <tr>
-                        <td colspan="2"><strong><em>Secondaire</em></strong>
-                            <em><strong>:</strong></em> <?php echo $datafermentation['Secondaire']; ?></td>
+                        <td colspan="2"><strong><em>Secondaire</em></strong> <em><strong>:</strong></em> <?php echo $datafermentation['Secondaire']; ?></td>
                     </tr>
                     <tr>
-                        <td colspan="2"><em><strong>Sucre à l'embouteillage
-                                    :</strong></em> <?php echo $datafermentation['Sucre']; ?></td>
+                        <td colspan="2"><strong><em>Ajout des fruits</em></strong> <em><strong>:</strong></em> rajouter 1.5kg de framboise congelées dans 1 fermenteur (celui soutiréen premier)</td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"><em><strong>Sucre à l'embouteillage :</strong></em> <?php echo $datafermentation['Sucre']; ?></td>
                     </tr>
                 </table>
             </div>
